@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>深圳分公司AI管理交互图谱</title>
+<title>深圳分公司AI管理图谱</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
 
@@ -517,6 +517,15 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.10);
   }
+  .branch-card.no-interact {
+    cursor: default;
+  }
+  .branch-card.no-interact:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .branch-card.no-interact.blue:hover { border-color: var(--blue-mid); }
+  .branch-card.no-interact.teal:hover { border-color: var(--teal-mid); }
 
   .branch-card .branch-avatar {
     width: 40px; height: 40px; border-radius: 50%;
@@ -777,13 +786,13 @@
 <!-- ═══════ HERO ═══════ -->
 <div class="hero">
   <div class="hero-left">
-    <h1>深圳分公司<span>AI管理交互图谱</span></h1>
+    <h1>深圳分公司<span>AI管理图谱</span></h1>
     <span class="hero-sub">三层组织架构 · 数字分身协作 · 能力双向流动</span>
   </div>
   <div class="hero-badges">
-    <span class="badge"><b class="badge-num">3</b> 层架构</span>
-    <span class="badge"><b class="badge-num">11</b> 只龙虾</span>
-    <span class="badge"><b class="badge-num">15+</b> 技能/周</span>
+    <span class="badge">3层架构</span>
+    <span class="badge">12只龙虾</span>
+    <span class="badge">15+skills每周</span>
   </div>
 </div>
 
@@ -999,14 +1008,14 @@
   <!-- Layer 3: 营业部 -->
   <div class="arch-layer layer-3" id="layer3">
     <div class="branches-row">
-      <div class="branch-card blue" style="cursor:default;">
+      <div class="branch-card blue no-interact">
         <div class="branch-avatar blue">🏢</div>
         <div class="branch-info">
           <div class="branch-name">营业部老总 AI数字分身</div>
           <div class="branch-desc">考核看板 / 督导追踪 / 经营决策辅助</div>
         </div>
       </div>
-      <div class="branch-card teal" style="cursor:default;">
+      <div class="branch-card teal no-interact">
         <div class="branch-avatar teal">💡</div>
         <div class="branch-info">
           <div class="branch-name">投顾客户服务技能</div>
@@ -1161,7 +1170,34 @@ const botData = {
     avatar: '📚',
     intro: '我是私募业务知识龙虾，专注于管理人备案监控、代销产品评估、基金业绩排名追踪。我为分公司机构业务部门提供私募领域的专业知识和数据支持。',
     value: '<b>替代工作：</b>手工查询管理人备案信息、整理产品评估报告、追踪业绩排名变化<br><b>辅助工作：</b>管理人风险预警、产品适配推荐、合规要点提醒',
-    cases: []
+    cases: [
+      {
+        title: '私募近期市场情况与业绩分析报告',
+        date: '今天 09:30',
+        user: null,
+        botName: '私募业务知识龙虾',
+        botAvatar: '📚',
+        botTag: '智能体',
+        theme: 'blue',
+        messages: [
+          { type: 'bot', text: '<b>📊 私募近期市场情况与业绩分析报告</b><br><br><b>一、整体业绩概览（截至2026年4月30日）</b><br>• 全市场12,862只私募证券产品年内平均收益率 <span class="green">6.69%</span><br>• 正收益产品占比 <span class="green">76.83%</span>（超四分之三产品赚钱）<br>• 头部5%分位产品收益率高达 <span class="green">28.64%-32.42%</span><br><br><b>市场环境：</b>2026年打破"股债跷跷板"常态，走出<b>股债双强、商品分化</b>的特殊行情。<br><br><b>二、五大策略业绩分化</b><br><table class="msg-table"><tr><th>策略类型</th><th>平均收益率</th><th>正收益占比</th><th>表现评价</th></tr><tr><td>股票策略</td><td><span class="green">7.64%</span></td><td>~77%</td><td>🟢 领跑全场，AI/半导体赛道贡献最大</td></tr><tr><td>多资产策略</td><td><span class="green">5.80%</span></td><td>80.23%</td><td>🟢 跨资产配置优势显现</td></tr><tr><td>期货及衍生品(CTA)</td><td><span class="green">5.53%</span></td><td>74.68%</td><td>🟡 内部剧烈分化，趋势策略承压</td></tr><tr><td>组合基金(FOF)</td><td><span class="green">5.13%</span></td><td>86.70%</td><td>🟢 稳健性最佳，分散配置价值凸显</td></tr><tr><td>债券策略</td><td><span class="green">2.29%</span></td><td>83.23%</td><td>🟡 收益稳健，波动极小，适合打底</td></tr></table><br><b>策略亮点：</b><br>• <b>股票策略：</b>8,247只产品平均收益7.64%，重仓科技、半导体、新能源的产品涨幅领先<br>• <b>组合基金：</b>正收益占比高达86.7%，在所有策略中最高<br>• <b>债券策略：</b>虽绝对收益不高，但胜在稳健，适合防御配置' },
+          { type: 'bot', text: '<b>三、量化策略深度解析</b><br><br><b>指数增强表现（4月单月超额）</b><br><table class="msg-table"><tr><th>指数</th><th>私募超额</th><th>公募超额</th><th>评价</th></tr><tr><td>中证500</td><td><span class="green">+1.91%</span></td><td><span class="red">-0.43%</span></td><td>🟢 私募500指增超额最强</td></tr><tr><td>中证2000</td><td><span class="green">+1.32%</span></td><td><span class="green">+1.27%</span></td><td>🟢 公私募表现接近</td></tr><tr><td>中证1000</td><td><span class="green">+0.50%</span></td><td><span class="red">-1.16%</span></td><td>🟡 分化明显</td></tr><tr><td>沪深300</td><td><span class="red">-0.94%</span></td><td><span class="green">+0.15%</span></td><td>🔴 私募300指增承压</td></tr></table><br><b>量化行业动态</b><br>• <b>规模：</b>公私募量化股票产品合计近 <b>2.1万亿元</b>（公募4,730亿，占权益公募5.5%）<br>• <b>头部量化业绩：</b><br>&nbsp;&nbsp;◦ 幻方量化：近1个月收益均值 <span class="green">14.16%</span>，近1年 <span class="green">71.50%</span><br>&nbsp;&nbsp;◦ 灵均投资：近1个月 <span class="green">11.04%</span>，近1年 <span class="green">73.35%</span><br>&nbsp;&nbsp;◦ 鸣石基金：近1个月 <span class="green">10.88%</span>，近1年 <span class="green">55.12%</span><br>&nbsp;&nbsp;◦ 进化论资产：近1个月 <span class="green">9.87%</span>，近1年 <span class="green">53.05%</span>' },
+          { type: 'bot', text: '<b>四、百亿私募最新动向（截至5月15日）</b><br><br><b>仓位变化：逆向加仓信号明显</b><br>• 股票私募整体仓位指数：<span class="green">80.09%</span>（连续4周小幅下滑）<br>• <b>百亿私募逆势加仓：</b>仓位指数升至 <span class="green">82.10%</span>（结束连续4周下跌，环比+1.38%）<br>• 满仓百亿私募占比：<span class="green">62.17%</span>（较前一周提升近5个百分点）<br>• 中等仓位百亿私募降至24.33%，空仓仅0.63%<br><br><b>百亿私募数量创新高</b><br>• 截至2026年4月，百亿管理人数量达 <span class="green">127家</span>（历史新高）<br>• 其中59家量化股票管理人+3家量化CTA管理人，量化占比接近50%<br>• 头部集中度持续提升：前10大管理人占全行业规模近21%，前10%管理人占84.31%<br><br><b>新晋百亿量化代表</b><br>• <b>宏锡基金：</b>专注量化CTA，2026年1月迈入百亿梯队，创始人刘锡斌<br>• 多家老牌量化私募规模持续扩容，双轮驱动（CTA+股票量化）成主流' }
+        ]
+      },
+      {
+        title: '5月最新市场环境与配置建议',
+        date: '今天 10:00',
+        user: null,
+        botName: '私募业务知识龙虾',
+        botAvatar: '📚',
+        botTag: '智能体',
+        theme: 'blue',
+        messages: [
+          { type: 'bot', text: '<b>六、5月最新市场环境与配置建议</b><br><br><b>当前市场特征（5月）</b><br>• A股高位整理，结构轮动加快，科技成长板块仍为主线但短期调整压力增加<br>• 500指增超额环境预测相对1000指增较强，活跃交投下整体超额环境友好<br>• 商品市场：趋势逆转，流畅度下滑，CTA盈利转中性，中长趋势承压<br><br><b>机构配置建议</b><br><table class="msg-table"><tr><th>配置方向</th><th>具体策略</th><th>配置逻辑</th></tr><tr><td>🟢 核心打底</td><td>固收+、多资产策略</td><td>控制回撤，稳健收益</td></tr><tr><td>🟢 进攻配置</td><td>股票策略（主观/量化）</td><td>把握科技、成长主线，优选持仓均衡、偏成长风格产品</td></tr><tr><td>🟡 分散增强</td><td>CTA复合策略、套利策略</td><td>等待共振长趋势机会，当前以防御类为主</td></tr><tr><td>⚪ 中性配置</td><td>市场中性策略</td><td>受行情反复、超额分化影响，维持中性</td></tr></table><br><b>雪球私募研究团队核心观点：</b>现阶段应坚持<b>稳健性与机会性并重</b>，以均衡持有、长期配置为主，不盲目追高，在震荡上行市场中获取稳健收益。<br><br><b>七、风险提示</b><br>1. <b>地缘政治风险：</b>霍尔木兹海峡等地缘冲突可能导致商品市场异常波动<br>2. <b>经济复苏不及预期：</b>若AI科技及周期消费主线业绩兑现不足，可能引发调整<br>3. <b>量化拥挤度上升：</b>量化规模快速扩大可能影响超额收益获取能力<br>4. <b>流动性风险：</b>全球或国内市场极端环境可能引发流动性缺失' }
+        ]
+      }
+    ]
   },
 
   'kpi-lobster': {
@@ -1182,6 +1218,19 @@ const botData = {
         theme: 'purple',
         messages: [
           { type: 'bot', text: '<b>📊 深圳彩田路 考核看板</b> &nbsp;📅 2026.5.15 &nbsp;|&nbsp; 综合 5/5<br><br><b>✅ 达标（4项）</b><br>🔹 产品标准保有 <span class="green">1**.**亿 71.1%</span><br>🔹 新增信用账户 <span class="green">***.**户 71.3%</span><br>🔹 H1交易增值净创收 <span class="green">**.**万 70.7%</span><br>🔹 H1产品标准销量 <span class="green">*.**亿 80.3%</span><br><br><b>⚠️ 落后（5项）</b><br>🔸 私募代买收入 <span class="red">*.*****‰ 24.2%</span><br>🔸 新开有效财富客户 <span class="orange">***.**户 33.7%</span><br>🔸 Q1新开有效财富客户 <span class="orange">***.**户 31.4%</span><br>🔸 Q2净新增财富客户 <span class="orange">***.**户 45.2%</span><br>🔸 分公司年度社会招聘 <span class="red">**人 0%</span><br><br><b>🎯 AI策略建议</b><br><br><span class="red"><b>【P0】</b></span> 招聘+重点业务推进均为0分，满分6分全丢，立即推进可拿约*.**分<br><br><span class="orange"><b>【P1】</b></span> 新开有效财富客户仅34%，需加大拓展；Q1/Q2客户指标均落后，Q3-Q4加倍补回<br><br><span class="orange"><b>【P2】</b></span> 私募代买收入市占率*.**‰，差距大<br><br><span class="blue"><b>【P3】</b></span> 利润59%偏低<br><br>📈 <b>7*.** → 达标*.** → 全面*.**+</b><br><span style="color:#999;font-size:12px;">最紧迫：招聘+重点业务推进两个零分项</span>' }
+        ]
+      },
+      {
+        title: '考核看板链接一键推送',
+        date: '昨天 10:20',
+        user: { name: '孙黎慧', avatar: '孙' },
+        botName: '经营考核bot',
+        botAvatar: '📊',
+        botTag: '智能体',
+        theme: 'purple',
+        messages: [
+          { type: 'user', text: '<span class="blue">@经营考核bot</span> 发下考核看板' },
+          { type: 'bot', quote: '孙黎慧: @经营考核bot 发下考核看板', text: '<b>📊 营业部经营考核看板</b><br><br>🔗 https://dcb6d8f07ce048b583c5ffd3228c0b2d.app.codebuddy.work/考核看板_20260522.html<br><br>🔑 密码：<b>kh2026</b>' }
         ]
       }
     ]
@@ -1231,6 +1280,19 @@ const botData = {
           { type: 'user', text: '<span class="blue">@交易增值龙虾</span> 红荔路营业部smarT业务数据分析' },
           { type: 'bot', quote: '韦秋洁: @交易增值龙虾 你能给我红荔路营业...', text: '<b>📊 深圳红荔路 smarT 业务数据分析</b><br>统计区间：2026.04.01 - 2026.05.18<br><br><b>一、基本情况</b><table class="msg-table"><tr><th>指标</th><th>数据</th></tr><tr><td>目标值</td><td>63 户</td></tr><tr><td>完成值</td><td><span class="red">-29 户（负增长！）</span></td></tr><tr><td>缺口</td><td>92 户</td></tr><tr><td>完成率</td><td><span class="red">10.68%</span></td></tr><tr><td>排名</td><td><span class="red">14/14（倒数第一）</span></td></tr><tr><td>当日新增户数</td><td>0</td></tr></table><br><b>二、各维度对比</b><table class="msg-table"><tr><th>维度</th><th>红荔路</th><th>深圳分公司</th></tr><tr><td>完成率</td><td><span class="red">10.68%</span></td><td>22.09%</td></tr><tr><td>完成值</td><td><span class="red">-29 户</span></td><td>-238 户</td></tr><tr><td>缺口</td><td>92 户</td><td>744 户</td></tr></table><br><b>🔴 三、问题诊断</b><ol class="msg-list"><li><b>完成率垫底：</b>10.68%完成率，是分公司平均（22.09%）的一半不到</li><li><b>负增长：</b>完成值为负数（-29），说明不仅没有净增客户，反而流失了</li><li><b>缺口巨大：</b>目标63户，实际缺口92户，完成率不到11%</li></ol><br><b>💡 四、建议</b><br>红荔路营业部需要重点关注，当前缺口较大且出现负增长。<br><ul class="msg-list"><li>梳理客户流失原因</li><li>加大营销活动推广力度</li><li>参考排名前列营业部的成功经验</li></ul>' }
         ]
+      },
+      {
+        title: 'Smart业务专项分析（含督导建议）',
+        date: '昨天 17:10',
+        user: null,
+        botName: '交易增值Smart',
+        botAvatar: '📈',
+        botTag: '智能体',
+        theme: 'purple',
+        messages: [
+          { type: 'bot', text: '<b>📊 深圳红荔路证券营业部 · Smart 业务专项分析</b><br>📅 数据日期：2026-05-22<br><br><b>① 交易增值整体（考核口径）</b><br>• 上半年目标 <b>154.56万</b> | 年累计 <b>72.51万</b> | 完成率 <span class="orange">46.9%</span><br>• 预估总缺口 <b>82.05万</b> | 每日缺口 <b>3.16万</b> | 当日 <b>1.23万</b> | Q2 <b>35.51万</b><br><br><b>② Smart 创收（年累计 20260101-20260522）</b><br>• Smart 当日开户 <b>2户</b> | 年累计开户 <b>103户</b><br>• Smart 当日收入 <b>0.28万</b> | 年累计 <b>19.01万</b><br>• Smart 占交易增值年累计比重 ≈ <b>26.2%</b>（19.01/72.51）<br><br><b>③ 决胜半程 Smart 活跃（核心督导）🚨</b><br>• 净增目标 <b>63户</b> | 完成 <span class="red">-24户</span>（决胜半程 16 - 开门红 40）<br>• 总缺口 <b>87户</b> | 储备池 <b>84户</b> | <b>储备/缺口 = 0.97×</b><br>• 赋能口径完成率 <span class="red">15.5%</span><br><br>🚨 <b>关键判定：</b>本期决胜半程比去年开门红还少 24 户，存在客户流失迹象。储备池即便 100% 转化也只够刚好填平缺口，新拉窗口仅剩 <span class="red">29 个交易日</span>（截至 7/3）。' },
+          { type: 'bot', text: '<b>④ 个人战况（22人，没有1人净增 ≥ 2）</b><br><br>负增长 TOP 5：<br><table class="msg-table"><tr><th>姓名</th><th>净增</th><th>决胜</th><th>开门红</th><th>储备</th></tr><tr><td>刘宇</td><td><span class="red">-5</span></td><td>0</td><td>5</td><td>8</td></tr><tr><td>冯丽彪</td><td><span class="red">-3</span></td><td>3</td><td>6</td><td>5</td></tr><tr><td>王丽容</td><td><span class="red">-3</span></td><td>1</td><td>4</td><td>2</td></tr><tr><td>赵利清</td><td><span class="red">-2</span></td><td>0</td><td>2</td><td>5</td></tr><tr><td>袁美艳</td><td><span class="red">-2</span></td><td>0</td><td>2</td><td>9</td></tr></table><br>正增长唯二：戴春耕 <span class="green">+1</span>、王一鸣 <span class="green">+1</span><br>Smart 创收 TOP 3：冯丽彪 <span class="green">4.15万</span> | 孙友平 <span class="green">2.52万</span> | 刘莹莹 <span class="green">1.98万</span><br><br><b>⑤ 督导建议</b><br>1. <b>储备池 84 户全员盘活：</b>已交易 15+ 天的优先冲 20 天阈值<br>2. <b>新签 7/3 前再上 10-15 户铺底</b>（当前日均 0.3 户，需翻倍）<br>3. <b>负增长 5 人逐人复盘</b>开门红老客户为何流失<br>4. <b>冯丽彪、孙友平等创收尖兵单独保护</b>，避免被活跃考核拖累绩效<br><br><span style="color:#999;font-size:11px;">（注：此前误发的"test placeholder"为机器人调用工具时参数填错，现已修复 ✅）</span>' }
+        ]
       }
     ]
   },
@@ -1242,7 +1304,34 @@ const botData = {
     avatar: '🎯',
     intro: '我是营销活动龙虾，负责活动排名跟踪、效果评估和资源配置优化建议。我帮助分公司市场部门和各营业部管理者掌握营销活动的实时进展和投入产出情况。',
     value: '<b>替代工作：</b>手工汇总活动数据、逐个计算ROI、制作效果报表<br><b>辅助工作：</b>活动效果预测、资源优化配置、最佳实践提炼',
-    cases: []
+    cases: [
+      {
+        title: '活动周报看板一键推送',
+        date: '昨天 09:15',
+        user: { name: '于水', avatar: '于' },
+        botName: '营销活动_小鱼刺#1',
+        botAvatar: '🎯',
+        botTag: '智能体',
+        theme: 'purple',
+        messages: [
+          { type: 'user', text: '<span class="blue">@营销活动_小鱼刺#1</span> 发下深圳分公司活动周报看板链接' },
+          { type: 'bot', quote: '于水: @营销活动_小鱼刺#1 发下深圳分公司活动周报看板链接', text: '<b>🔗 深圳分公司活动周报看板</b><br><br>https://44daaf05b73e4588b6149998de416ab4.app.codebuddy.work/index.html<br><br>🔑 密码：<b>sz2026</b>' }
+        ]
+      },
+      {
+        title: '决战半程二阶段活动数据卡片',
+        date: '今天 08:30',
+        user: { name: '于水', avatar: '于' },
+        botName: '营销活动_小鱼刺#1',
+        botAvatar: '🎯',
+        botTag: '智能体',
+        theme: 'purple',
+        messages: [
+          { type: 'user', text: '<span class="blue">@营销活动_小鱼刺#1</span> 重新发下深圳分公司决战半程活动数据' },
+          { type: 'bot', quote: '于水: @营销活动_小鱼刺#1 重新发下深圳分公司决战半程活动数据', text: '<b>📋 决战半程二阶段深圳分公司活动数据卡片</b><br><br>🚀 <b>客户经营模块</b><br><br>【核心KPI】<br>• 净新增财富及以上客户：<b>10,541户</b> / 目标12,514户<br>• 完成进度：<span class="green">84.23%</span>（排名第8/27）✅<br>• 自主新开有效财富客户：<b>2,246户</b><br>• 新开两融户：<b>754户</b>（排名第3/27）🏆<br><br>📈 <b>交易增值服务模块</b><br><br>【核心KPI】<br>• 净新增smarT活跃客户数：<span class="red">-211户</span>（排名第24/27）⚠️<br>• smart活跃（≥20日）：<b>237户</b><br>• 升佣签约：<b>651户</b><br>• 签约覆盖率：<span class="red">0.4500%</span>（排名第25/27）⚠️<br><br>💰 <b>产品配置业务模块</b><br><br>【核心KPI】<br>• 月度标准销量：<span class="green">23.10亿</span> / 目标17.40亿<br>• 完成进度：<span class="green">132.74%</span>（排名第4/27）✅<br><br>🚀 <b>私募业务推进模块</b><br><br>【核心KPI】<br>• 新开私募账户：<span class="green">59户</span>（排名第2/27）🏆<br>• 私募新增资产：<span class="green">61,964.54万元</span>（排名第2/27）🏆<br><br>⚠️ <b>重点关注</b><br><br>薄弱项：<br>• 净新增smarT活跃客户数：<span class="red">-211户</span> ⚠️<br>• 签约覆盖率：<span class="red">0.4500%</span> ⚠️<br><br>🎯 优势项：<br>• 净新增财富客户完成进度：<span class="green">84.23%</span> → 排名第8/27 ✅<br>• 新开两融户：<span class="green">754户</span> → 排名第3/27 🏆<br>• 月度标准销量完成进度：<span class="green">132.74%</span> → 排名第4/27 ✅<br><br>📅 数据更新日期：2026-05-21' }
+        ]
+      }
+    ]
   },
 
   'finance-data-lobster': {
@@ -1250,9 +1339,49 @@ const botData = {
     role: '财务分析智能体',
     theme: 'purple',
     avatar: '💰',
-    intro: '我是财务数据龙虾，负责预算编制辅助、收支多维拆解、偏差预警和营收预测。我为分公司财务部门和总经理提供财务数据分析和决策支持。',
-    value: '<b>替代工作：</b>手工编制预算表、跨维度汇总收支、计算偏差率<br><b>辅助工作：</b>智能预算预测、异常收支预警、成本优化建议',
-    cases: []
+    intro: '我是你的专属AI助手，通过飞书接入，服务于华泰证券财务管理场景。你的财务数据助手，负责帮你快速查询、整理和呈现营业部经营数据，提升日常财务管理效率。',
+    value: '<b>核心能力：</b><br>• <b>经营数据查询</b> — 各营业部的收入、利润、预算完成率等核心指标即问即答，支持同比、环比分析，快速定位变化趋势<br>• <b>费用管理</b> — 营业部费用支出明细查询与对比，差旅费管理办法解读及实操咨询<br>• <b>权限分级</b> — 支持按人员-营业部对应关系进行数据权限控制，每位营业部老总只能查看自己管辖的数据，财务总监可查全量',
+    cases: [
+      {
+        title: '财务数据即问即答',
+        date: '昨天 14:32',
+        user: { name: '李辉', avatar: '李' },
+        botName: '财务龙虾',
+        botAvatar: '💰',
+        botTag: '智能体',
+        theme: 'purple',
+        messages: [
+          { type: 'user', text: '<span class="blue">@财务龙虾</span> 北京出差住宿标准' },
+          { type: 'bot', quote: '李辉: @财务龙虾 北京出差住宿标准', text: '<b>北京出差住宿上限标准：</b><span class="green">990元/天</span>（甲类城市，其他人员）<br>公司负责人：<span class="green">1000元/天</span>' }
+        ]
+      },
+      {
+        title: '营业部利润数据查询',
+        date: '昨天 14:35',
+        user: { name: '李辉', avatar: '李' },
+        botName: '财务龙虾',
+        botAvatar: '💰',
+        botTag: '智能体',
+        theme: 'purple',
+        messages: [
+          { type: 'user', text: '<span class="blue">@财务龙虾</span> 龙岗目前利润情况' },
+          { type: 'bot', quote: '李辉: @财务龙虾 龙岗目前利润情况', text: '根据"营业部收入利润同比202604"文件，龙岗的考核利润情况：<br><br>• <b>1-4月考核利润同比增幅：</b><span class="green">+102.99%</span><br>• <b>4月考核利润累计月均变动：</b><span class="red">-0.21%</span>' }
+        ]
+      },
+      {
+        title: '自我介绍与能力展示',
+        date: '5月20日 10:15',
+        user: { name: '景融嘉', avatar: '景' },
+        botName: '财务数据龙虾',
+        botAvatar: '💰',
+        botTag: '智能体',
+        theme: 'purple',
+        messages: [
+          { type: 'user', text: '给我自我介绍一下吧！你的角色定位，你能做些什么，有什么核心的技能和产出？' },
+          { type: 'bot', text: '你好，我是你的专属AI助手，通过飞书接入，服务于华泰证券财务管理场景。<br><br><b>角色定位</b><br>你的财务数据助手，负责帮你快速查询、整理和呈现营业部经营数据，提升日常财务管理效率。<br><br><b>核心能力</b><br><br>📊 <b>经营数据查询</b><br>• 各营业部的收入、利润、预算完成率等核心指标即问即答<br>• 支持同比、环比分析，快速定位变化趋势<br><br>💰 <b>费用管理</b><br>• 营业部费用支出明细查询与对比<br>• 差旅费管理办法解读及实操咨询<br><br>🔐 <b>权限分级</b><br>• 支持按人员-营业部对应关系进行数据权限控制<br>• 每位营业部老总只能查看自己管辖的数据，财务总监可查全量' }
+        ]
+      }
+    ]
   },
 
   'pb-team-lobster': {
@@ -1262,7 +1391,21 @@ const botData = {
     avatar: '🏢',
     intro: '我是私募队伍绩效龙虾，专注于机构客户开发进度和PB业务规模监控。我帮助分公司机构业务部门掌握PB业务团队的绩效表现和客户拓展情况。',
     value: '<b>替代工作：</b>手工统计PB业务数据、整理客户开发进度、制作绩效排名<br><b>辅助工作：</b>客户流失预警、高潜客户识别、团队能力评估',
-    cases: []
+    cases: [
+      {
+        title: 'AMAC私募基金备案日报推送',
+        date: '今天 11:08',
+        user: null,
+        botName: '私募队伍管理助手',
+        botAvatar: '🏢',
+        botTag: '智能体',
+        theme: 'purple',
+        messages: [
+          { type: 'bot', text: '<b>📊 AMAC 私募基金备案日报</b>（2026-01-01 ~ 2026-05-26）<br><br><b>备案总量：</b>9,276 只<br><b>统计天数：</b>147 天 &nbsp;|&nbsp; <b>日均备案：</b>约 63 只<br><br><b>TOP 5 管理人：</b><br>1. 上海明汯投资管理有限公司 — 145只<br>2. 宁波平方和投资管理合伙企业 — 94只<br>3. 上海顽岩私募基金管理有限公司 — 82只<br>4. 上海黑翼资产管理有限公司 — 77只<br>5. 上海衍复投资管理有限公司 — 66只<br><br><b>TOP 5 托管人：</b><br>1. 国泰海通证券股份有限公司 — 1,734只<br>2. 中信证券股份有限公司 — 1,175只<br>3. 招商证券股份有限公司 — 767只<br>4. 华泰证券股份有限公司 — 564只<br>5. 招商银行股份有限公司 — 519只<br><br><b>无托管产品：</b>424 只（占比 4.57%）<br><br>📎 详细报告见附件' },
+          { type: 'file', icon: 'P', iconBg: '#FF6B6B', name: '私募基金备案分析报告_2026-01-01_2026-05-26.pdf', size: '466.3 KB' }
+        ]
+      }
+    ]
   },
 
   'hr-lobster': {
