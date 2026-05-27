@@ -61,7 +61,7 @@
 
   /* ── HERO ── */
   .hero {
-    padding: 16px 60px 8px;
+    padding: 14px 50px 8px;
     position: relative; z-index: 2;
     flex-shrink: 0;
     display: flex; align-items: center; justify-content: space-between;
@@ -69,24 +69,24 @@
   }
   .hero-left { display: flex; align-items: baseline; gap: 16px; }
   .hero h1 {
-    font-size: 22px; font-weight: 900; line-height: 1.3;
+    font-size: 24px; font-weight: 900; line-height: 1.3;
     color: var(--text-a);
   }
   .hero h1 span { color: var(--blue); font-weight: 900; }
-  .hero-sub { font-size: 12px; color: var(--text-d); }
+  .hero-sub { font-size: 13px; color: var(--text-d); }
   .hero-badges {
     display: flex; gap: 8px; flex-shrink: 0;
   }
   .badge {
     background: var(--bg-card); border-radius: 40px;
-    padding: 4px 12px; font-size: 11px; color: var(--text-d);
+    padding: 4px 12px; font-size: 12px; color: var(--text-d);
     border: 1px solid rgba(59,132,255,0.15);
   }
   .badge-num { color: var(--blue); font-weight: 700; }
 
   .sep {
     height: 1px; background: rgba(59,132,255,0.12);
-    margin: 0 60px; flex-shrink: 0;
+    margin: 0 50px; flex-shrink: 0;
   }
 
   /* ── 架构图区域 ── */
@@ -97,7 +97,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 6px 60px;
+    padding: 4px 50px;
     min-height: 0;
     gap: 0;
   }
@@ -124,16 +124,16 @@
   .agent-node {
     background: var(--bg-card);
     border-radius: var(--radius-card);
-    padding: 12px 18px;
+    padding: 13px 20px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     cursor: pointer;
     transition: all 0.25s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     border: 1.5px solid transparent;
     position: relative;
-    min-width: 220px;
+    min-width: 280px;
   }
   .agent-node:hover {
     transform: translateY(-2px);
@@ -145,10 +145,10 @@
   .agent-node.teal:hover { border-color: var(--teal); }
 
   .agent-avatar {
-    width: 36px; height: 36px;
+    width: 38px; height: 38px;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 18px;
+    font-size: 20px;
     flex-shrink: 0;
   }
   .agent-avatar.blue { background: var(--blue-light); }
@@ -156,33 +156,33 @@
 
   .agent-info { flex: 1; min-width: 0; }
   .agent-name {
-    font-size: 13px; font-weight: 700;
+    font-size: 14px; font-weight: 700;
     color: var(--text-a);
     line-height: 1.3;
   }
   .agent-role {
-    font-size: 11px; color: var(--text-d);
-    margin-top: 1px;
+    font-size: 12px; color: var(--text-d);
+    margin-top: 2px;
   }
   .agent-tag {
     display: inline-flex;
-    padding: 1px 6px;
-    border-radius: 3px;
-    font-size: 10px; font-weight: 500;
-    margin-top: 2px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px; font-weight: 500;
+    margin-top: 3px;
   }
   .agent-tag.blue { background: var(--blue-light); color: var(--blue); }
   .agent-tag.teal { background: var(--teal-light); color: var(--teal); }
 
   .agent-arrow {
-    width: 20px; height: 20px;
-    border-radius: 5px;
+    width: 22px; height: 22px;
+    border-radius: 6px;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
     color: var(--text-d);
     opacity: 0.3;
     transition: all 0.2s;
-    font-size: 11px;
+    font-size: 12px;
   }
   .agent-node:hover .agent-arrow {
     opacity: 0.7;
@@ -193,7 +193,7 @@
   /* ── 中台板块卡片 ── */
   .platforms-row {
     display: flex;
-    gap: 14px;
+    gap: 12px;
     justify-content: center;
     width: 100%;
     max-width: 1100px;
@@ -208,7 +208,7 @@
     border: 1.5px solid transparent;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
     flex: 1;
     min-width: 0;
   }
@@ -217,8 +217,8 @@
   .platform-card.teal { border-color: var(--teal-mid); }
 
   .platform-header {
-    display: flex; align-items: center; gap: 6px;
-    padding-bottom: 6px;
+    display: flex; align-items: center; gap: 8px;
+    padding-bottom: 8px;
     border-bottom: 1px solid rgba(0,0,0,0.06);
     flex-shrink: 0;
   }
@@ -232,17 +232,41 @@
   .platform-icon.teal { background: var(--teal-light); }
 
   .platform-title {
-    font-size: 13px; font-weight: 700;
+    font-size: 14px; font-weight: 700;
     color: var(--text-a);
   }
   .platform-title span {
-    font-size: 11px; color: var(--text-d);
+    font-size: 12px; color: var(--text-d);
     font-weight: 400; margin-left: 4px;
   }
 
   .platform-body {
     display: flex; flex-direction: column;
     gap: 3px;
+  }
+
+  /* 经营管理分组标签 */
+  .bot-group-label {
+    font-size: 11px; font-weight: 600;
+    color: var(--purple);
+    background: var(--purple-light);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin: 3px 0 2px;
+    display: flex; align-items: center;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  /* Bot紧凑两列网格 */
+  .bot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+  }
+  .bot-grid .bot-chip {
+    padding: 3px 6px;
+    min-width: 0;
   }
 
   /* Bot chip */
@@ -265,22 +289,22 @@
   .platform-card.teal .bot-chip:hover { border-color: var(--teal-mid); }
 
   .bot-chip-icon {
-    width: 18px; height: 18px; border-radius: 4px;
+    width: 20px; height: 20px; border-radius: 4px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 10px; flex-shrink: 0;
+    font-size: 11px; flex-shrink: 0;
   }
   .bot-chip-icon.blue { background: var(--blue-light); }
   .bot-chip-icon.purple { background: var(--purple-light); }
   .bot-chip-icon.teal { background: var(--teal-light); }
 
   .bot-chip-name {
-    flex: 1; font-size: 11px; font-weight: 500;
+    flex: 1; font-size: 12px; font-weight: 500;
     color: var(--text-a);
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
 
   .bot-chip-arrow {
-    font-size: 9px; color: var(--text-d);
+    font-size: 10px; color: var(--text-d);
     opacity: 0.3; transition: opacity 0.2s;
   }
   .bot-chip:hover .bot-chip-arrow { opacity: 0.7; }
@@ -290,9 +314,9 @@
     border: 1px dashed rgba(0,0,0,0.1);
   }
   .bot-chip.planned .planned-label {
-    font-size: 9px; color: var(--text-d);
+    font-size: 10px; color: var(--text-d);
     background: rgba(0,0,0,0.04);
-    padding: 0px 4px; border-radius: 3px;
+    padding: 1px 5px; border-radius: 3px;
     flex-shrink: 0;
   }
 
@@ -303,35 +327,183 @@
     margin: 2px 0;
   }
 
-  /* 客户经营描述 */
-  .skill-desc {
-    font-size: 11px; color: var(--text-d);
+  /* 客户服务赋能板块 */
+  .skill-platform-subtitle {
+    font-size: 12px; color: var(--teal);
+    font-weight: 600;
+    text-align: center;
+    margin: 2px 0 6px;
+  }
+  .skill-section {
+    background: var(--grey-96);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+  }
+  .skill-section:hover {
+    background: var(--bg-card);
+    border-color: var(--teal-mid);
+    transform: translateX(2px);
+  }
+  .skill-section-header {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 6px;
+  }
+  .skill-section-icon {
+    width: 28px; height: 28px; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; background: var(--teal-light);
+    flex-shrink: 0;
+  }
+  .skill-section-title {
+    font-size: 14px; font-weight: 700;
+    color: var(--text-a);
+  }
+  .skill-section-desc {
+    font-size: 12px; color: var(--text-d);
     line-height: 1.5;
-    padding: 4px 6px;
+    margin-bottom: 6px;
+  }
+  .skill-metrics {
+    display: flex; align-items: center; gap: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  .skill-metrics::before {
+    content: '✓';
+    color: var(--teal); font-weight: 700;
+    font-size: 12px;
+  }
+  .skill-metric-item {
+    font-size: 11px; color: var(--text-d);
+    background: var(--bg-card);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .skill-tag {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .skill-tag:hover { transform: translateY(-1px); }
+  .skill-tag.blue {
+    background: rgba(59,132,255,0.08);
+    color: var(--blue);
+    border-color: rgba(59,132,255,0.2);
+  }
+  .skill-tag.teal {
+    background: var(--teal-light);
+    color: var(--teal);
+    border-color: rgba(13,148,136,0.2);
+  }
+  .skill-tag.purple {
+    background: var(--purple-light);
+    color: var(--purple);
+    border-color: rgba(124,92,252,0.2);
+  }
+  .skill-tag.orange {
+    background: rgba(234,88,12,0.08);
+    color: #ea580c;
+    border-color: rgba(234,88,12,0.2);
+  }
+
+  /* 客户服务赋能折叠 */
+  .skill-desc-line {
+    font-size: 11px; color: var(--text-d);
+    text-align: center;
+    padding: 4px 8px;
     background: var(--grey-96);
     border-radius: 6px;
+    margin: 2px 0 4px;
+    line-height: 1.5;
   }
-  .skill-desc b { color: var(--teal); font-weight: 600; }
+  .skill-desc-line b { color: var(--teal); font-weight: 600; }
+  .skill-desc-line span { color: var(--text-c); }
+
+  .skill-fold {
+    background: var(--grey-96);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+  .skill-fold:hover {
+    border-color: var(--teal-mid);
+    background: var(--bg-card);
+  }
+  .skill-fold-header {
+    display: flex; align-items: center; gap: 8px;
+    padding: 7px 10px;
+    position: relative;
+  }
+  .skill-fold-icon {
+    width: 24px; height: 24px; border-radius: 5px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; background: var(--teal-light);
+    flex-shrink: 0;
+  }
+  .skill-fold-title {
+    font-size: 12px; font-weight: 700;
+    color: var(--text-a); flex: 1;
+  }
+  .skill-fold-arrow {
+    font-size: 11px; color: var(--text-d);
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+  }
+  .skill-fold.open .skill-fold-arrow {
+    transform: rotate(90deg);
+  }
+  .skill-fold-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 10px;
+  }
+  .skill-fold.open .skill-fold-body {
+    max-height: 300px;
+    padding: 0 10px 8px;
+  }
+  .skill-fold-summary {
+    font-size: 10px; color: var(--text-c);
+    margin-top: 1px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
 
   /* ── 营业部卡片 ── */
   .branches-row {
     display: flex;
-    gap: 14px;
+    gap: 12px;
     justify-content: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 720px;
     padding: 4px 0;
   }
 
   .branch-card {
     background: var(--bg-card);
     border-radius: var(--radius-card);
-    padding: 12px 16px;
+    padding: 13px 18px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border: 1.5px solid transparent;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     cursor: pointer;
     transition: all 0.25s ease;
     flex: 1;
@@ -347,23 +519,23 @@
   }
 
   .branch-card .branch-avatar {
-    width: 38px; height: 38px; border-radius: 50%;
+    width: 40px; height: 40px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 18px; flex-shrink: 0;
+    font-size: 20px; flex-shrink: 0;
   }
   .branch-avatar.blue { background: var(--blue-light); }
   .branch-avatar.teal { background: var(--teal-light); }
 
   .branch-info { flex: 1; min-width: 0; }
-  .branch-name { font-size: 13px; font-weight: 700; color: var(--text-a); }
+  .branch-name { font-size: 14px; font-weight: 700; color: var(--text-a); }
   .branch-desc {
-    font-size: 11px; color: var(--text-d);
-    margin-top: 1px; line-height: 1.4;
+    font-size: 12px; color: var(--text-d);
+    margin-top: 2px; line-height: 1.4;
   }
 
   /* ── 层间距 ── */
   .layer-spacer {
-    height: 24px;
+    height: 28px;
     position: relative;
     width: 100%;
     display: flex;
@@ -371,27 +543,27 @@
     justify-content: center;
   }
   .layer-spacer-label {
-    font-size: 10px;
+    font-size: 12px; font-weight: 600;
     color: var(--text-d);
     background: var(--bg-base);
-    padding: 1px 8px;
-    border-radius: 8px;
-    opacity: 0.6;
+    padding: 2px 12px;
+    border-radius: 10px;
+    opacity: 0.7;
     z-index: 1;
   }
 
   /* ── 回流标签 ── */
   .feedback-label {
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 10px;
+    font-size: 12px; font-weight: 600;
     color: var(--teal);
     background: var(--teal-light);
     padding: 3px 8px;
-    border-radius: 8px;
-    opacity: 0.8;
+    border-radius: 10px;
+    opacity: 0.9;
   }
 
   /* ── Modal ── */
@@ -580,12 +752,12 @@
   /* FOOTER */
   .footer-bar {
     display: flex; align-items: center; justify-content: space-between;
-    padding: 8px 60px 12px;
+    padding: 10px 50px 24px;
     flex-shrink: 0;
     position: relative; z-index: 2;
   }
-  .footer-quote { font-size: 11px; color: var(--text-d); font-weight: 500; }
-  .footer-ver { font-size: 10px; color: var(--text-d); opacity: 0.4; }
+  .footer-quote { font-size: 12px; color: var(--text-d); font-weight: 500; }
+  .footer-ver { font-size: 11px; color: var(--text-d); opacity: 0.4; }
 
   /* 动画 */
   @keyframes fadeUp {
@@ -642,8 +814,8 @@
     <div class="agent-node blue" data-bot="gm" onclick="openBotModal('gm')">
       <div class="agent-avatar blue">👔</div>
       <div class="agent-info">
-        <div class="agent-name">分公司总经理</div>
-        <div class="agent-role">AI数字分身 · 经营决策智能体</div>
+        <div class="agent-name">分公司总经理智能体</div>
+        <div class="agent-role">经营决策数字分身</div>
       </div>
       <div class="agent-arrow">▸</div>
     </div>
@@ -699,71 +871,120 @@
           <div class="platform-title">经营管理 <span>管得更细</span></div>
         </div>
         <div class="platform-body">
-          <!-- 考核与经营决策 -->
-          <div class="bot-chip" data-bot="kpi-lobster" onclick="openBotModal('kpi-lobster')">
-            <div class="bot-chip-icon purple">📊</div>
-            <span class="bot-chip-name">经营考核龙虾</span>
-            <span class="bot-chip-arrow">▸</span>
+          <div class="bot-group-label">▎考核与经营决策</div>
+          <div class="bot-grid">
+            <div class="bot-chip" data-bot="kpi-lobster" onclick="openBotModal('kpi-lobster')">
+              <div class="bot-chip-icon purple">📊</div>
+              <span class="bot-chip-name">经营考核龙虾</span>
+              <span class="bot-chip-arrow">▸</span>
+            </div>
+            <div class="bot-chip" data-bot="campaign-lobster" onclick="openBotModal('campaign-lobster')">
+              <div class="bot-chip-icon purple">🎯</div>
+              <span class="bot-chip-name">营销活动龙虾</span>
+              <span class="bot-chip-arrow">▸</span>
+            </div>
+            <div class="bot-chip" data-bot="finance-data-lobster" onclick="openBotModal('finance-data-lobster')">
+              <div class="bot-chip-icon purple">💰</div>
+              <span class="bot-chip-name">财务数据龙虾</span>
+              <span class="bot-chip-arrow">▸</span>
+            </div>
           </div>
-          <div class="bot-chip" data-bot="campaign-lobster" onclick="openBotModal('campaign-lobster')">
-            <div class="bot-chip-icon purple">🎯</div>
-            <span class="bot-chip-name">营销活动龙虾</span>
-            <span class="bot-chip-arrow">▸</span>
+          <div class="bot-group-label">▎队伍与人力管理</div>
+          <div class="bot-grid">
+            <div class="bot-chip" data-bot="wealth-team-lobster" onclick="openBotModal('wealth-team-lobster')">
+              <div class="bot-chip-icon purple">👤</div>
+              <span class="bot-chip-name">财富队伍绩效龙虾</span>
+              <span class="bot-chip-arrow">▸</span>
+            </div>
+            <div class="bot-chip" data-bot="pb-team-lobster" onclick="openBotModal('pb-team-lobster')">
+              <div class="bot-chip-icon purple">🏢</div>
+              <span class="bot-chip-name">私募队伍绩效龙虾</span>
+              <span class="bot-chip-arrow">▸</span>
+            </div>
+            <div class="bot-chip" data-bot="hr-lobster" onclick="openBotModal('hr-lobster')">
+              <div class="bot-chip-icon purple">🤝</div>
+              <span class="bot-chip-name">人力招聘龙虾</span>
+              <span class="bot-chip-arrow">▸</span>
+            </div>
           </div>
-          <div class="bot-chip" data-bot="finance-data-lobster" onclick="openBotModal('finance-data-lobster')">
-            <div class="bot-chip-icon purple">💰</div>
-            <span class="bot-chip-name">财务数据龙虾</span>
-            <span class="bot-chip-arrow">▸</span>
-          </div>
-          <!-- 分隔线 -->
-          <div class="bot-group-divider"></div>
-          <!-- 队伍与人力管理 -->
-          <div class="bot-chip" data-bot="wealth-team-lobster" onclick="openBotModal('wealth-team-lobster')">
-            <div class="bot-chip-icon purple">👤</div>
-            <span class="bot-chip-name">财富队伍绩效龙虾</span>
-            <span class="bot-chip-arrow">▸</span>
-          </div>
-          <div class="bot-chip" data-bot="pb-team-lobster" onclick="openBotModal('pb-team-lobster')">
-            <div class="bot-chip-icon purple">🏢</div>
-            <span class="bot-chip-name">私募队伍绩效龙虾</span>
-            <span class="bot-chip-arrow">▸</span>
-          </div>
-          <div class="bot-chip" data-bot="hr-lobster" onclick="openBotModal('hr-lobster')">
-            <div class="bot-chip-icon purple">🤝</div>
-            <span class="bot-chip-name">人力招聘龙虾</span>
-            <span class="bot-chip-arrow">▸</span>
-          </div>
-          <!-- 分隔线 -->
-          <div class="bot-group-divider"></div>
-          <!-- 业务督导 -->
-          <div class="bot-chip" data-bot="trade-lobster" onclick="openBotModal('trade-lobster')">
-            <div class="bot-chip-icon purple">📈</div>
-            <span class="bot-chip-name">交易增值龙虾</span>
-            <span class="bot-chip-arrow">▸</span>
-          </div>
-          <div class="bot-chip" data-bot="product-sales-lobster" onclick="openBotModal('product-sales-lobster')">
-            <div class="bot-chip-icon purple">📦</div>
-            <span class="bot-chip-name">产品销售督导龙虾</span>
-            <span class="bot-chip-arrow">▸</span>
+          <div class="bot-group-label">▎业务督导</div>
+          <div class="bot-grid">
+            <div class="bot-chip" data-bot="trade-lobster" onclick="openBotModal('trade-lobster')">
+              <div class="bot-chip-icon purple">📈</div>
+              <span class="bot-chip-name">交易增值龙虾</span>
+              <span class="bot-chip-arrow">▸</span>
+            </div>
+            <div class="bot-chip" data-bot="product-sales-lobster" onclick="openBotModal('product-sales-lobster')">
+              <div class="bot-chip-icon purple">📦</div>
+              <span class="bot-chip-name">产品销售督导龙虾</span>
+              <span class="bot-chip-arrow">▸</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- 客户经营赋能 -->
+      <!-- 客户服务赋能 -->
       <div class="platform-card teal">
         <div class="platform-header">
           <div class="platform-icon teal">💬</div>
-          <div class="platform-title">客户经营赋能 <span>服务更强</span></div>
+          <div class="platform-title">客户服务赋能 <span>服务更强</span></div>
         </div>
         <div class="platform-body">
-          <div class="bot-chip" data-bot="customer-skill-platform" onclick="openBotModal('customer-skill-platform')">
-            <div class="bot-chip-icon teal">🎯</div>
-            <span class="bot-chip-name">客户经营Skill平台</span>
-            <span class="bot-chip-arrow">▸</span>
+          <div class="skill-platform-subtitle">业务驱动 · 一线共创 · 经验自下而上沉淀</div>
+          <div class="skill-desc-line">
+            <b>每周收集</b> 投顾服务技能 <b>15+</b> <span>→</span> <b>沉淀标准化</b> <span>→</span> <b>反向赋能</b> 全部营业部<br>
+            <span>已沉淀 3 周 · 近 50 个技能</span>
           </div>
-          <div class="skill-desc">
-            <b>每周收集</b> 投顾技能 → <b>沉淀标准化</b> → <b>反向赋能</b> 全营业部<br>
-            <span style="color:var(--teal);font-size:10px;">已标准化 23 项 · 本周新增 3 项</span>
+
+          <div class="skill-fold" onclick="toggleSkillFold(this)">
+            <div class="skill-fold-header">
+              <div class="skill-fold-icon">📊</div>
+              <div>
+                <div class="skill-fold-title">投资研究能力</div>
+                <div class="skill-fold-summary">赋能投顾"投研-解读-输出"全链条，将研究所专业能力内化为一线销售生产力</div>
+              </div>
+              <div class="skill-fold-arrow">▸</div>
+            </div>
+            <div class="skill-fold-body">
+              <div class="skill-metrics">
+                <span class="skill-metric-item">晨会效率+85%</span>
+                <span class="skill-metric-item">投研更新频率+400%</span>
+                <span class="skill-metric-item">投顾销售能力评分+12分</span>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag blue">全球市场点评</span>
+                <span class="skill-tag teal">晨会投研PPT</span>
+                <span class="skill-tag purple">GARP股票评测</span>
+                <span class="skill-tag blue">每日研报分析</span>
+                <span class="skill-tag teal">A股盘后总结</span>
+                <span class="skill-tag orange">资产配置演练</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-fold" onclick="toggleSkillFold(this)">
+            <div class="skill-fold-header">
+              <div class="skill-fold-icon">💬</div>
+              <div>
+                <div class="skill-fold-title">客户服务触达能力</div>
+                <div class="skill-fold-summary">实现客户服务"千人千面"，从标准化服务升级为精准化、场景化、及时化触达</div>
+              </div>
+              <div class="skill-fold-arrow">▸</div>
+            </div>
+            <div class="skill-fold-body">
+              <div class="skill-metrics">
+                <span class="skill-metric-item">微信群运营效率+75%</span>
+                <span class="skill-metric-item">触达频次周1次→日级</span>
+                <span class="skill-metric-item">材料制作2小时→5分钟</span>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag blue">SmarT星级变化提醒</span>
+                <span class="skill-tag orange">私募推荐材料生成</span>
+                <span class="skill-tag teal">微信群物料自动生成</span>
+                <span class="skill-tag blue">金融产品亮点话术</span>
+                <span class="skill-tag purple">IMA知识库+晨会工作流</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -778,21 +999,19 @@
   <!-- Layer 3: 营业部 -->
   <div class="arch-layer layer-3" id="layer3">
     <div class="branches-row">
-      <div class="branch-card blue" data-bot="branch-manager" onclick="openBotModal('branch-manager')">
+      <div class="branch-card blue" style="cursor:default;">
         <div class="branch-avatar blue">🏢</div>
         <div class="branch-info">
           <div class="branch-name">营业部老总 AI数字分身</div>
           <div class="branch-desc">考核看板 / 督导追踪 / 经营决策辅助</div>
         </div>
-        <div class="agent-arrow">▸</div>
       </div>
-      <div class="branch-card teal" data-bot="advisor-skills" onclick="openBotModal('advisor-skills')">
+      <div class="branch-card teal" style="cursor:default;">
         <div class="branch-avatar teal">💡</div>
         <div class="branch-info">
           <div class="branch-name">投顾客户服务技能</div>
-          <div class="branch-desc">沉淀自一线 → 反哺中台 → 全司推广</div>
+          <div class="branch-desc">来源于一线投顾实际工作场景，经中台提炼标准化后反向赋能全部营业部</div>
         </div>
-        <div class="agent-arrow">▸</div>
       </div>
     </div>
     <div class="feedback-label">↩ 技能回流</div>
@@ -826,23 +1045,62 @@
 // ═══════════════════════════════════════
 const botData = {
   'gm': {
-    name: '分公司总经理 AI数字分身',
-    role: '经营决策智能体',
+    name: '分公司总经理智能体',
+    role: '经营决策数字分身',
     theme: 'blue',
     avatar: '👔',
-    intro: '我是分公司总经理的AI数字分身，基于分公司全量经营数据，辅助总经理进行日常经营决策、异常预警和战略分析。我整合了经营洞察、经营管理和客户经营三大中台能力，为总经理提供全景式经营视图。',
-    value: '<b>替代工作：</b>手工汇总多维度经营报表、跨部门数据整合、异常指标人工巡检<br><b>辅助决策：</b>经营趋势预测、风险提前预警、资源配置优化建议、同业对标分析',
+    intro: '我是分公司总经理的经营决策数字分身，基于分公司全量经营数据，为总经理提供全景式经营视图。我整合经营洞察、经营管理、客户服务赋能三大中台能力，不是替代总经理的判断，而是让总经理看得更全、判得更准、调得更快。',
+    value: '<b>核心能力：</b><br>• <b>异常主动预警</b> — 自动巡查各业务线，发现覆盖率低于前10%、连续负增长等系统性风险<br>• <b>智能归因诊断</b> — 发现问题后自动拆解到分公司→营业部→投顾个体维度，调取沟通记录定位根因<br>• <b>决策建议与调度指挥</b> — 基于数据给出可执行决策，并调度各Bot协同解决，追踪执行效果',
     cases: [
       {
-        title: '每日经营简报',
-        date: '每天 08:30',
+        title: 'AI协同流 · 总经理晨间经营巡视',
+        date: '今天 08:30',
         user: null,
-        botName: '总经理助理Bot',
+        botName: '总经理AI数字分身',
         botAvatar: '👔',
         botTag: '智能体',
         theme: 'blue',
         messages: [
-          { type: 'bot', text: '<b>📊 深圳分公司每日经营简报</b> | 2026.05.27<br><br><b>一、昨日核心指标</b><br>• 营业收入：<span class="green">***万</span>（环比+3.2%）<br>• 产品销量：<span class="green">*.**亿</span>（目标完成率 68%）<br>• 新增有效客户：<span class="orange">**户</span>（低于日均目标）<br>• 交易增值覆盖率：<span class="green">42%</span>（+1.5pp）<br><br><b>二、异常预警</b><br>🔸 <span class="red">红荔路营业部</span> smarT业务完成率仅10.68%，连续3日垫底<br>🔸 <span class="orange">私募代买收入</span> 市占率*.**‰，距目标差距较大<br><br><b>三、AI建议</b><br>1. 重点关注红荔路交易增值业务，建议本周内约谈营业部负责人<br>2. 前海营业部表现优异（50%完成率），可总结推广经验<br>3. 本周客户经营Skill新增3项，建议组织分享会' }
+          { type: 'bot', text: '<b>🚨 经营异常主动预警</b><br><br>总经理您好，今早系统自动巡视发现以下异常：<br><br>🔸 <b>交易增值业务</b>：深圳分公司SmarT策略覆盖率 <span class="red">28.5%</span>，低于公司前10%平均水平（42%），排名 <span class="orange">第8/14</span><br>🔸 <b>红荔路营业部</b>：SmarT业务完成率 <span class="red">10.68%</span>，连续3周垫底<br>🔸 <b>两融新增客户</b>：本月累计**户，低于华南区平均水平<br><br>📌 <b>AI判断：</b>交易增值业务存在系统性落后风险，建议立即诊断。' }
+        ]
+      },
+      {
+        title: 'Step 2 · 总经理追问 → AI自动拆解',
+        date: '今天 08:32',
+        user: { name: '总经理', avatar: '总' },
+        botName: '经营考核龙虾',
+        botAvatar: '📊',
+        botTag: '智能体',
+        theme: 'blue',
+        messages: [
+          { type: 'user', text: '交易增值业务落后的原因是什么？' },
+          { type: 'bot', text: '<b>📊 交易增值业务自动诊断报告</b><br><br>收到指令，正在自动拆解分析...<br><br><b>一、指标拖累分析</b><br>• SmarT策略覆盖率：28.5%（目标40%，缺口11.5pp）<br>• Matic策略覆盖率：19.2%（目标30%，缺口10.8pp）<br>• <span class="red">核心拖累：SmarT销售净增客户为负数（-29户）</span><br><br><b>二、营业部异常定位</b><br><table class="msg-table"><tr><th>营业部</th><th>完成率</th><th>排名</th><th>状态</th></tr><tr><td>红荔路</td><td><span class="red">10.68%</span></td><td>14/14</td><td><span class="red">🚨 极度落后</span></td></tr><tr><td>彩田路</td><td><span class="orange">32%</span></td><td>10/14</td><td><span class="orange">⚠️ 落后</span></td></tr><tr><td>益田路</td><td>38%</td><td>6/14</td><td>正常</td></tr><tr><td>前海</td><td><span class="green">52%</span></td><td>1/14</td><td><span class="green">✅ 优秀</span></td></tr></table><br><b>三、趋势风险判断</b><br>• 红荔路连续3周负增长，客户流失严重<br>• 与优秀营业部（前海52%）差距达 <span class="red">41pp</span><br>• 若按当前趋势，Q2目标完成概率 <span class="red">< 20%</span><br><br>📌 <b>初步结论：</b>问题集中在红荔路营业部，建议进一步拆解到投顾个体维度。' }
+        ]
+      },
+      {
+        title: 'Step 3 · 交易增值虾深度定位',
+        date: '今天 08:35',
+        user: { name: '总经理', avatar: '总' },
+        botName: '交易增值龙虾',
+        botAvatar: '📈',
+        botTag: '智能体',
+        theme: 'blue',
+        messages: [
+          { type: 'user', text: '红荔路营业部，拆解到投顾个体' },
+          { type: 'bot', text: '<b>📈 红荔路营业部 SmarT业务 投顾个体诊断</b><br><br>正在分析红荔路营业部12位财富顾问的SmarT业务数据...<br><br><b>一、尾部投顾画像（后4名）</b><br><table class="msg-table"><tr><th>投顾</th><th>覆盖率</th><th>客户沟通次数</th><th>客户亏损率</th></tr><tr><td>张某</td><td><span class="red">3%</span></td><td>2次/月</td><td><span class="red">68%</span></td></tr><tr><td>李某</td><td><span class="red">5%</span></td><td>1次/月</td><td><span class="red">72%</span></td></tr><tr><td>王某</td><td><span class="red">8%</span></td><td>3次/月</td><td><span class="orange">55%</span></td></tr><tr><td>赵某</td><td><span class="orange">12%</span></td><td>4次/月</td><td><span class="orange">48%</span></td></tr></table><br><b>二、问题根因分析</b><br>• <b>沟通频次低：</b>尾部4名投顾月均沟通 < 3次，远低于优秀投顾（12次/月）<br>• <b>客户亏损率高：</b>客户经常亏损，投顾沟通乏力，缺乏有效话术<br>• <b>技能缺失：</b>尾部投顾对SmarT策略理解不足，无法向客户清晰传达价值<br><br><b>三、关键发现</b><br>💡 调取投顾与客户的沟通记录后发现：<br>• 张某最近3次沟通均因"客户亏损"而未能推进SmarT<br>• 李某从未使用结构化话术，沟通内容零散<br>• 王某尝试推荐但被客户以"之前亏过"拒绝，无应对策略<br><br>📌 <b>诊断结论：</b>不是客户没有需求，是投顾缺乏<b>"亏损客户激活"</b>和<b>"SmarT价值传达"</b>的能力。' }
+        ]
+      },
+      {
+        title: 'Step 4 · 客户服务赋能Skill介入',
+        date: '今天 08:38',
+        user: { name: '总经理', avatar: '总' },
+        botName: '客户服务赋能平台',
+        botAvatar: '💬',
+        botTag: '平台',
+        theme: 'teal',
+        messages: [
+          { type: 'user', text: '怎么帮助这些投顾提升SmarT沟通能力？' },
+          { type: 'bot', text: '<b>🎯 客户服务赋能方案</b><br><br>基于诊断结果，系统已为红荔路营业部4名尾部投顾匹配以下赋能Skill：<br><br><b>一、精准匹配Skill</b><br>• <b>SmarT亏损客户激活话术</b> — 针对"之前亏过"客户的结构化回应<br>• <b>SmarT价值一分钟传达</b> — 用客户语言讲清楚策略价值<br>• <b>客户持仓诊断+策略匹配</b> — 根据客户持仓自动生成SmarT适配建议<br>• <b>沟通记录智能复盘</b> — 分析每次沟通弱点，给出改进建议<br><br><b>二、赋能方式</b><br>• 即刻推送至4名投顾飞书<br>• 本周三组织"SmarT沟通实战演练"（由前海优秀投顾分享）<br>• 2周后系统自动复盘提升效果<br><br><b>三、预期效果</b><br>• 投顾沟通频次：3次/月 → 8次/月<br>• 客户激活率：预计提升 <span class="green">+25pp</span><br>• SmarT覆盖率：3个月内从10% → <span class="green">35%</span><br><br>📌 <b>AI协同流完成：</b>从"异常发现"到"根因定位"到"Skill赋能"，全程 <b>8分钟</b>，无需人工汇总报表。' }
         ]
       }
     ]
@@ -1098,6 +1356,13 @@ const botData = {
     ]
   }
 };
+
+// ═══════════════════════════════════════
+// 折叠控制
+// ═══════════════════════════════════════
+function toggleSkillFold(el) {
+  el.classList.toggle('open');
+}
 
 // ═══════════════════════════════════════
 // Modal 控制
