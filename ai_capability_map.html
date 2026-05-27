@@ -814,8 +814,8 @@
     <div class="agent-node blue" data-bot="gm" onclick="openBotModal('gm')">
       <div class="agent-avatar blue">👔</div>
       <div class="agent-info">
-        <div class="agent-name">分公司总经理</div>
-        <div class="agent-role">AI数字分身 · 经营决策智能体</div>
+        <div class="agent-name">分公司总经理智能体</div>
+        <div class="agent-role">经营决策数字分身</div>
       </div>
       <div class="agent-arrow">▸</div>
     </div>
@@ -932,8 +932,8 @@
         <div class="platform-body">
           <div class="skill-platform-subtitle">业务驱动 · 一线共创 · 经验自下而上沉淀</div>
           <div class="skill-desc-line">
-            <b>每周收集</b> 投顾技能 <span>→</span> <b>沉淀标准化</b> <span>→</span> <b>反向赋能</b> 全营业部<br>
-            <span>已标准化 23 项 · 本周新增 3 项</span>
+            <b>每周收集</b> 投顾服务技能 <b>15+</b> <span>→</span> <b>沉淀标准化</b> <span>→</span> <b>反向赋能</b> 全部营业部<br>
+            <span>已沉淀 3 周 · 近 50 个技能</span>
           </div>
 
           <div class="skill-fold" onclick="toggleSkillFold(this)">
@@ -999,21 +999,19 @@
   <!-- Layer 3: 营业部 -->
   <div class="arch-layer layer-3" id="layer3">
     <div class="branches-row">
-      <div class="branch-card blue" data-bot="branch-manager" onclick="openBotModal('branch-manager')">
+      <div class="branch-card blue" style="cursor:default;">
         <div class="branch-avatar blue">🏢</div>
         <div class="branch-info">
           <div class="branch-name">营业部老总 AI数字分身</div>
           <div class="branch-desc">考核看板 / 督导追踪 / 经营决策辅助</div>
         </div>
-        <div class="agent-arrow">▸</div>
       </div>
-      <div class="branch-card teal" data-bot="advisor-skills" onclick="openBotModal('advisor-skills')">
+      <div class="branch-card teal" style="cursor:default;">
         <div class="branch-avatar teal">💡</div>
         <div class="branch-info">
           <div class="branch-name">投顾客户服务技能</div>
-          <div class="branch-desc">沉淀自一线 → 反哺中台 → 全司推广</div>
+          <div class="branch-desc">来源于一线投顾实际工作场景，经中台提炼标准化后反向赋能全部营业部</div>
         </div>
-        <div class="agent-arrow">▸</div>
       </div>
     </div>
     <div class="feedback-label">↩ 技能回流</div>
@@ -1047,12 +1045,12 @@
 // ═══════════════════════════════════════
 const botData = {
   'gm': {
-    name: '分公司总经理 AI数字分身',
-    role: '经营决策智能体',
+    name: '分公司总经理智能体',
+    role: '经营决策数字分身',
     theme: 'blue',
     avatar: '👔',
-    intro: '我是分公司总经理的AI数字分身，基于分公司全量经营数据，辅助总经理进行日常经营决策、异常预警和战略分析。我整合了经营洞察、经营管理和客户经营三大中台能力，为总经理提供全景式经营视图。',
-    value: '<b>替代工作：</b>手工汇总多维度经营报表、跨部门数据整合、异常指标人工巡检<br><b>辅助决策：</b>经营趋势预测、风险提前预警、资源配置优化建议、同业对标分析',
+    intro: '我是分公司总经理的经营决策数字分身，基于分公司全量经营数据，为总经理提供全景式经营视图。我整合经营洞察、经营管理、客户服务赋能三大中台能力，不是替代总经理的判断，而是让总经理看得更全、判得更准、调得更快。',
+    value: '<b>核心能力：</b><br>• <b>异常主动预警</b> — 自动巡查各业务线，发现覆盖率低于前10%、连续负增长等系统性风险<br>• <b>智能归因诊断</b> — 发现问题后自动拆解到分公司→营业部→投顾个体维度，调取沟通记录定位根因<br>• <b>决策建议与调度指挥</b> — 基于数据给出可执行决策，并调度各Bot协同解决，追踪执行效果',
     cases: [
       {
         title: 'AI协同流 · 总经理晨间经营巡视',
