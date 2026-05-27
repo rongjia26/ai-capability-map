@@ -1231,7 +1231,13 @@ const botData = {
         messages: [
           { type: 'user', text: '<span class="blue">@经营考核bot</span> 发下考核看板' },
           { type: 'bot', quote: '孙黎慧: @经营考核bot 发下考核看板', text: '<b>📊 营业部经营考核看板</b><br><br>🔗 https://dcb6d8f07ce048b583c5ffd3228c0b2d.app.codebuddy.work/考核看板_20260522.html<br><br>🔑 密码：<b>kh2026</b>' }
-        ]
+        ],
+        dashboard: {
+          label: '推送的看板链接：',
+          title: '营业部经营考核看板',
+          url: 'https://dcb6d8f07ce048b583c5ffd3228c0b2d.app.codebuddy.work/考核看板_20260522.html',
+          password: 'kh2026'
+        }
       }
     ]
   },
@@ -1316,7 +1322,13 @@ const botData = {
         messages: [
           { type: 'user', text: '<span class="blue">@营销活动_小鱼刺#1</span> 发下深圳分公司活动周报看板链接' },
           { type: 'bot', quote: '于水: @营销活动_小鱼刺#1 发下深圳分公司活动周报看板链接', text: '<b>🔗 深圳分公司活动周报看板</b><br><br>https://44daaf05b73e4588b6149998de416ab4.app.codebuddy.work/index.html<br><br>🔑 密码：<b>sz2026</b>' }
-        ]
+        ],
+        dashboard: {
+          label: '推送的看板链接：',
+          title: '深圳分公司活动周报看板',
+          url: 'https://44daaf05b73e4588b6149998de416ab4.app.codebuddy.work/index.html',
+          password: 'sz2026'
+        }
       },
       {
         title: '决战半程二阶段活动数据卡片',
@@ -1537,6 +1549,29 @@ function openBotModal(botId) {
     bot.cases.forEach(c => {
       html += `<div class="msg-divider"><span>${c.title}</span></div>`;
       if (c.date) html += `<div class="msg-date">${c.date}</div>`;
+
+      if (c.dashboard) {
+        html += `<div class="msg-row">
+          <div class="msg-avatar ${c.theme}">${c.botAvatar}</div>
+          <div class="msg-content">
+            <div class="msg-meta">
+              <span class="msg-name">${c.botName}</span>
+              <span class="msg-tag">看板</span>
+            </div>
+            <div class="msg-bubble" style="padding:12px 14px;">
+              <div style="font-size:12px;color:var(--text-d);margin-bottom:8px;">${c.dashboard.label}</div>
+              <a href="${c.dashboard.url}" target="_blank" class="dashboard-link" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--grey-96);border-radius:8px;text-decoration:none;color:var(--text-a);font-size:13px;border:1px solid rgba(0,0,0,0.04);transition:background .2s;">
+                <span style="font-size:18px;">📊</span>
+                <div style="flex:1;min-width:0;">
+                  <div style="font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${c.dashboard.title}</div>
+                  <div style="font-size:11px;color:var(--text-d);margin-top:2px;">点击打开看板${c.dashboard.password ? ' · 密码：' + c.dashboard.password : ''}</div>
+                </div>
+                <span style="font-size:12px;color:var(--blue);">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>`;
+      }
 
       c.messages.forEach((msg) => {
         if (msg.type === 'user') {
