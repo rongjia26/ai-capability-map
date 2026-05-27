@@ -18,15 +18,14 @@
     --bg-base: #F3F5F9;
     --bg-card: #FFFFFF;
     --grey-96: #F1F3F9;
-    --green: #00AB61;
     --purple: #7c5cfc;
     --purple-light: rgba(124,92,252,0.08);
     --purple-mid: rgba(124,92,252,0.15);
     --teal: #0d9488;
     --teal-light: rgba(13,148,136,0.08);
     --teal-mid: rgba(13,148,136,0.15);
-    --radius-card: 16px;
-    --radius-tag: 8px;
+    --radius-card: 14px;
+    --radius-tag: 6px;
   }
 
   html, body { width: 100%; height: 100%; overflow: hidden; }
@@ -62,26 +61,25 @@
 
   /* ── HERO ── */
   .hero {
-    padding: 18px 60px 10px;
+    padding: 16px 60px 8px;
     position: relative; z-index: 2;
     flex-shrink: 0;
-    display: flex; align-items: flex-end; justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between;
     gap: 20px;
   }
-  .hero-left { display: flex; flex-direction: column; }
+  .hero-left { display: flex; align-items: baseline; gap: 16px; }
   .hero h1 {
-    font-size: 26px; font-weight: 900; line-height: 1.3;
-    color: var(--text-a); margin-bottom: 3px;
+    font-size: 22px; font-weight: 900; line-height: 1.3;
+    color: var(--text-a);
   }
   .hero h1 span { color: var(--blue); font-weight: 900; }
-  .hero-sub { font-size: 13px; color: var(--text-d); line-height: 1.5; }
+  .hero-sub { font-size: 12px; color: var(--text-d); }
   .hero-badges {
-    display: flex; gap: 10px; flex-wrap: wrap;
-    flex-shrink: 0; padding-bottom: 2px;
+    display: flex; gap: 8px; flex-shrink: 0;
   }
   .badge {
     background: var(--bg-card); border-radius: 40px;
-    padding: 5px 14px; font-size: 12px; color: var(--text-d);
+    padding: 4px 12px; font-size: 11px; color: var(--text-d);
     border: 1px solid rgba(59,132,255,0.15);
   }
   .badge-num { color: var(--blue); font-weight: 700; }
@@ -99,12 +97,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 8px 60px 4px;
+    padding: 6px 60px;
     min-height: 0;
     gap: 0;
   }
 
-  /* SVG 连接线层 */
   .arch-lines {
     position: absolute;
     top: 0; left: 0;
@@ -123,26 +120,14 @@
     width: 100%;
   }
 
-  .layer-label {
-    position: absolute;
-    left: 0;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--text-d);
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    letter-spacing: 3px;
-    opacity: 0.5;
-  }
-
-  /* ── 智能体节点 ── */
+  /* ── 智能体节点（Layer 1 & 3）── */
   .agent-node {
     background: var(--bg-card);
     border-radius: var(--radius-card);
-    padding: 14px 18px;
+    padding: 12px 18px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     cursor: pointer;
     transition: all 0.25s ease;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
@@ -151,128 +136,121 @@
     min-width: 220px;
   }
   .agent-node:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.10);
   }
   .agent-node.blue { border-color: var(--blue-mid); }
   .agent-node.blue:hover { border-color: var(--blue); }
-  .agent-node.purple { border-color: var(--purple-mid); }
-  .agent-node.purple:hover { border-color: var(--purple); }
   .agent-node.teal { border-color: var(--teal-mid); }
   .agent-node.teal:hover { border-color: var(--teal); }
 
-  .agent-node.large {
-    padding: 18px 28px;
-    min-width: 280px;
-  }
-  .agent-node.large .agent-avatar {
-    width: 48px; height: 48px;
-    font-size: 24px;
-  }
-  .agent-node.large .agent-name { font-size: 16px; }
-  .agent-node.large .agent-role { font-size: 13px; }
-
   .agent-avatar {
-    width: 40px; height: 40px;
+    width: 36px; height: 36px;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 20px;
+    font-size: 18px;
     flex-shrink: 0;
   }
   .agent-avatar.blue { background: var(--blue-light); }
-  .agent-avatar.purple { background: var(--purple-light); }
   .agent-avatar.teal { background: var(--teal-light); }
 
   .agent-info { flex: 1; min-width: 0; }
   .agent-name {
-    font-size: 14px; font-weight: 700;
+    font-size: 13px; font-weight: 700;
     color: var(--text-a);
     line-height: 1.3;
   }
   .agent-role {
-    font-size: 12px; color: var(--text-d);
-    margin-top: 2px;
+    font-size: 11px; color: var(--text-d);
+    margin-top: 1px;
   }
   .agent-tag {
     display: inline-flex;
-    padding: 2px 7px;
-    border-radius: 4px;
+    padding: 1px 6px;
+    border-radius: 3px;
     font-size: 10px; font-weight: 500;
-    margin-top: 4px;
+    margin-top: 2px;
   }
   .agent-tag.blue { background: var(--blue-light); color: var(--blue); }
-  .agent-tag.purple { background: var(--purple-light); color: var(--purple); }
   .agent-tag.teal { background: var(--teal-light); color: var(--teal); }
 
   .agent-arrow {
-    width: 24px; height: 24px;
-    border-radius: 6px;
+    width: 20px; height: 20px;
+    border-radius: 5px;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
     color: var(--text-d);
     opacity: 0.3;
     transition: all 0.2s;
-    font-size: 12px;
+    font-size: 11px;
   }
   .agent-node:hover .agent-arrow {
     opacity: 0.7;
     color: var(--blue);
   }
-  .agent-node.purple:hover .agent-arrow { color: var(--purple); }
   .agent-node.teal:hover .agent-arrow { color: var(--teal); }
 
   /* ── 中台板块卡片 ── */
+  .platforms-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    padding: 4px 0;
+  }
+
   .platform-card {
     background: var(--bg-card);
     border-radius: var(--radius-card);
-    padding: 14px;
+    padding: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border: 1.5px solid transparent;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    min-width: 260px;
+    gap: 6px;
     flex: 1;
-    max-width: 320px;
+    min-width: 0;
   }
   .platform-card.blue { border-color: var(--blue-mid); }
   .platform-card.purple { border-color: var(--purple-mid); }
   .platform-card.teal { border-color: var(--teal-mid); }
 
   .platform-header {
-    display: flex; align-items: center; gap: 8px;
-    padding-bottom: 8px;
+    display: flex; align-items: center; gap: 6px;
+    padding-bottom: 6px;
     border-bottom: 1px solid rgba(0,0,0,0.06);
+    flex-shrink: 0;
   }
   .platform-icon {
-    width: 28px; height: 28px; border-radius: 7px;
+    width: 24px; height: 24px; border-radius: 6px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 14px;
+    font-size: 12px;
   }
   .platform-icon.blue { background: var(--blue-light); }
   .platform-icon.purple { background: var(--purple-light); }
   .platform-icon.teal { background: var(--teal-light); }
 
   .platform-title {
-    font-size: 14px; font-weight: 700;
+    font-size: 13px; font-weight: 700;
     color: var(--text-a);
   }
   .platform-title span {
-    font-size: 12px; color: var(--text-d);
+    font-size: 11px; color: var(--text-d);
     font-weight: 400; margin-left: 4px;
   }
 
   .platform-body {
     display: flex; flex-direction: column;
-    gap: 4px;
+    gap: 3px;
   }
 
-  /* 小Bot标签 */
+  /* Bot chip */
   .bot-chip {
     display: flex; align-items: center;
-    gap: 6px;
-    padding: 6px 10px;
-    border-radius: 8px;
+    gap: 5px;
+    padding: 4px 8px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s;
     background: var(--grey-96);
@@ -281,106 +259,111 @@
   .bot-chip:hover {
     background: var(--bg-card);
     border-color: var(--blue-mid);
-    transform: translateX(3px);
+    transform: translateX(2px);
   }
   .platform-card.purple .bot-chip:hover { border-color: var(--purple-mid); }
   .platform-card.teal .bot-chip:hover { border-color: var(--teal-mid); }
 
   .bot-chip-icon {
-    width: 22px; height: 22px; border-radius: 5px;
+    width: 18px; height: 18px; border-radius: 4px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 12px; flex-shrink: 0;
+    font-size: 10px; flex-shrink: 0;
   }
   .bot-chip-icon.blue { background: var(--blue-light); }
   .bot-chip-icon.purple { background: var(--purple-light); }
   .bot-chip-icon.teal { background: var(--teal-light); }
 
   .bot-chip-name {
-    flex: 1; font-size: 12px; font-weight: 500;
+    flex: 1; font-size: 11px; font-weight: 500;
     color: var(--text-a);
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
 
   .bot-chip-arrow {
-    font-size: 10px; color: var(--text-d);
+    font-size: 9px; color: var(--text-d);
     opacity: 0.3; transition: opacity 0.2s;
   }
   .bot-chip:hover .bot-chip-arrow { opacity: 0.7; }
 
   .bot-chip.planned {
-    opacity: 0.6;
+    opacity: 0.5;
     border: 1px dashed rgba(0,0,0,0.1);
   }
   .bot-chip.planned .planned-label {
-    font-size: 10px; color: var(--text-d);
+    font-size: 9px; color: var(--text-d);
     background: rgba(0,0,0,0.04);
-    padding: 1px 5px; border-radius: 3px;
+    padding: 0px 4px; border-radius: 3px;
     flex-shrink: 0;
   }
 
+  /* 经营管理分组分隔线 */
+  .bot-group-divider {
+    height: 0;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    margin: 2px 0;
+  }
+
+  /* 客户经营描述 */
+  .skill-desc {
+    font-size: 11px; color: var(--text-d);
+    line-height: 1.5;
+    padding: 4px 6px;
+    background: var(--grey-96);
+    border-radius: 6px;
+  }
+  .skill-desc b { color: var(--teal); font-weight: 600; }
+
   /* ── 营业部卡片 ── */
+  .branches-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 4px 0;
+  }
+
   .branch-card {
     background: var(--bg-card);
     border-radius: var(--radius-card);
-    padding: 14px 18px;
+    padding: 12px 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border: 1.5px solid transparent;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     cursor: pointer;
     transition: all 0.25s ease;
-    min-width: 260px;
     flex: 1;
-    max-width: 340px;
+    min-width: 0;
   }
   .branch-card.blue { border-color: var(--blue-mid); }
   .branch-card.blue:hover { border-color: var(--blue); }
   .branch-card.teal { border-color: var(--teal-mid); }
   .branch-card.teal:hover { border-color: var(--teal); }
   .branch-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.10);
   }
 
   .branch-card .branch-avatar {
-    width: 44px; height: 44px; border-radius: 50%;
+    width: 38px; height: 38px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 22px; flex-shrink: 0;
+    font-size: 18px; flex-shrink: 0;
   }
   .branch-avatar.blue { background: var(--blue-light); }
   .branch-avatar.teal { background: var(--teal-light); }
 
   .branch-info { flex: 1; min-width: 0; }
-  .branch-name { font-size: 14px; font-weight: 700; color: var(--text-a); }
+  .branch-name { font-size: 13px; font-weight: 700; color: var(--text-a); }
   .branch-desc {
-    font-size: 12px; color: var(--text-d);
-    margin-top: 2px; line-height: 1.4;
+    font-size: 11px; color: var(--text-d);
+    margin-top: 1px; line-height: 1.4;
   }
 
-  /* ── 中间平台三列布局 ── */
-  .platforms-row {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    width: 100%;
-    max-width: 1000px;
-    padding: 8px 0;
-  }
-
-  /* ── 营业部行 ── */
-  .branches-row {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    width: 100%;
-    max-width: 720px;
-    padding: 8px 0;
-  }
-
-  /* ── 层级间距 ── */
+  /* ── 层间距 ── */
   .layer-spacer {
-    height: 36px;
+    height: 24px;
     position: relative;
     width: 100%;
     display: flex;
@@ -388,26 +371,26 @@
     justify-content: center;
   }
   .layer-spacer-label {
-    font-size: 11px;
+    font-size: 10px;
     color: var(--text-d);
     background: var(--bg-base);
-    padding: 2px 10px;
-    border-radius: 10px;
-    opacity: 0.7;
+    padding: 1px 8px;
+    border-radius: 8px;
+    opacity: 0.6;
     z-index: 1;
   }
 
   /* ── 回流标签 ── */
   .feedback-label {
     position: absolute;
-    right: 40px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 11px;
+    font-size: 10px;
     color: var(--teal);
     background: var(--teal-light);
-    padding: 4px 10px;
-    border-radius: 10px;
+    padding: 3px 8px;
+    border-radius: 8px;
     opacity: 0.8;
   }
 
@@ -564,7 +547,7 @@
   }
   .msg-file-size { font-size: 11px; color: #999; margin-top: 2px; }
 
-  /* ── Bot介绍卡片（Modal内） ── */
+  /* Bot介绍卡片 */
   .bot-profile {
     background: linear-gradient(135deg, var(--blue-light), rgba(59,132,255,0.03));
     border-radius: 12px; padding: 14px;
@@ -594,17 +577,17 @@
   .bot-profile.purple .bot-profile-section b { color: var(--purple); }
   .bot-profile.teal .bot-profile-section b { color: var(--teal); }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   .footer-bar {
     display: flex; align-items: center; justify-content: space-between;
-    padding: 10px 60px 14px;
+    padding: 8px 60px 12px;
     flex-shrink: 0;
     position: relative; z-index: 2;
   }
-  .footer-quote { font-size: 12px; color: var(--text-d); font-weight: 500; }
-  .footer-ver { font-size: 11px; color: var(--text-d); opacity: 0.4; }
+  .footer-quote { font-size: 11px; color: var(--text-d); font-weight: 500; }
+  .footer-ver { font-size: 10px; color: var(--text-d); opacity: 0.4; }
 
-  /* ── 动画 ── */
+  /* 动画 */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
@@ -623,7 +606,7 @@
 <div class="hero">
   <div class="hero-left">
     <h1>深圳分公司<span>AI管理交互图谱</span></h1>
-    <p class="hero-sub">三层组织架构 · 数字分身协作 · 能力双向流动</p>
+    <span class="hero-sub">三层组织架构 · 数字分身协作 · 能力双向流动</span>
   </div>
   <div class="hero-badges">
     <span class="badge"><b class="badge-num">3</b> 层架构</span>
@@ -637,7 +620,6 @@
 <!-- ═══════ 架构图 ═══════ -->
 <div class="arch-map" id="archMap">
 
-  <!-- SVG连接线（动态计算） -->
   <svg class="arch-lines" id="archLines" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
@@ -653,18 +635,15 @@
         <path d="M2 1L8 5L2 9" fill="none" stroke="#6D778B" stroke-width="1.5" stroke-linecap="round"/>
       </marker>
     </defs>
-    <!-- 线条由JS动态绘制 -->
   </svg>
 
   <!-- Layer 1: 分公司总经理 -->
   <div class="arch-layer layer-1" id="layer1">
-    <div class="layer-label">决策层</div>
-    <div class="agent-node large blue" data-bot="gm" onclick="openBotModal('gm')">
+    <div class="agent-node blue" data-bot="gm" onclick="openBotModal('gm')">
       <div class="agent-avatar blue">👔</div>
       <div class="agent-info">
         <div class="agent-name">分公司总经理</div>
-        <div class="agent-role">AI数字分身</div>
-        <span class="agent-tag blue">经营决策智能体</span>
+        <div class="agent-role">AI数字分身 · 经营决策智能体</div>
       </div>
       <div class="agent-arrow">▸</div>
     </div>
@@ -676,7 +655,6 @@
 
   <!-- Layer 2: 分公司中台 -->
   <div class="arch-layer layer-2" id="layer2">
-    <div class="layer-label">中台层</div>
     <div class="platforms-row">
 
       <!-- 经营洞察 -->
@@ -721,7 +699,7 @@
           <div class="platform-title">经营管理 <span>管得更细</span></div>
         </div>
         <div class="platform-body">
-          <div style="font-size:10px;color:var(--text-d);opacity:0.6;margin-bottom:2px;padding-left:4px;">考核与经营决策</div>
+          <!-- 考核与经营决策 -->
           <div class="bot-chip" data-bot="kpi-lobster" onclick="openBotModal('kpi-lobster')">
             <div class="bot-chip-icon purple">📊</div>
             <span class="bot-chip-name">经营考核龙虾</span>
@@ -737,7 +715,9 @@
             <span class="bot-chip-name">财务数据龙虾</span>
             <span class="bot-chip-arrow">▸</span>
           </div>
-          <div style="font-size:10px;color:var(--text-d);opacity:0.6;margin-top:4px;margin-bottom:2px;padding-left:4px;">队伍与人力管理</div>
+          <!-- 分隔线 -->
+          <div class="bot-group-divider"></div>
+          <!-- 队伍与人力管理 -->
           <div class="bot-chip" data-bot="wealth-team-lobster" onclick="openBotModal('wealth-team-lobster')">
             <div class="bot-chip-icon purple">👤</div>
             <span class="bot-chip-name">财富队伍绩效龙虾</span>
@@ -753,7 +733,9 @@
             <span class="bot-chip-name">人力招聘龙虾</span>
             <span class="bot-chip-arrow">▸</span>
           </div>
-          <div style="font-size:10px;color:var(--text-d);opacity:0.6;margin-top:4px;margin-bottom:2px;padding-left:4px;">业务督导</div>
+          <!-- 分隔线 -->
+          <div class="bot-group-divider"></div>
+          <!-- 业务督导 -->
           <div class="bot-chip" data-bot="trade-lobster" onclick="openBotModal('trade-lobster')">
             <div class="bot-chip-icon purple">📈</div>
             <span class="bot-chip-name">交易增值龙虾</span>
@@ -779,8 +761,9 @@
             <span class="bot-chip-name">客户经营Skill平台</span>
             <span class="bot-chip-arrow">▸</span>
           </div>
-          <div style="font-size:11px;color:var(--text-d);line-height:1.5;margin-top:4px;padding:6px 8px;background:var(--grey-96);border-radius:6px;">
-            <b style="color:var(--teal);">每周收集</b> 投顾技能 → <b style="color:var(--teal);">沉淀标准化</b> → <b style="color:var(--teal);">反向赋能</b> 全营业部
+          <div class="skill-desc">
+            <b>每周收集</b> 投顾技能 → <b>沉淀标准化</b> → <b>反向赋能</b> 全营业部<br>
+            <span style="color:var(--teal);font-size:10px;">已标准化 23 项 · 本周新增 3 项</span>
           </div>
         </div>
       </div>
@@ -794,13 +777,12 @@
 
   <!-- Layer 3: 营业部 -->
   <div class="arch-layer layer-3" id="layer3">
-    <div class="layer-label">一线层</div>
     <div class="branches-row">
       <div class="branch-card blue" data-bot="branch-manager" onclick="openBotModal('branch-manager')">
         <div class="branch-avatar blue">🏢</div>
         <div class="branch-info">
           <div class="branch-name">营业部老总 AI数字分身</div>
-          <div class="branch-desc">经营管理：考核看板 / 督导追踪 / 经营决策辅助</div>
+          <div class="branch-desc">考核看板 / 督导追踪 / 经营决策辅助</div>
         </div>
         <div class="agent-arrow">▸</div>
       </div>
@@ -808,7 +790,7 @@
         <div class="branch-avatar teal">💡</div>
         <div class="branch-info">
           <div class="branch-name">投顾客户服务技能</div>
-          <div class="branch-desc">沉淀自一线实战经验 → 反哺中台Skill平台</div>
+          <div class="branch-desc">沉淀自一线 → 反哺中台 → 全司推广</div>
         </div>
         <div class="agent-arrow">▸</div>
       </div>
@@ -821,7 +803,7 @@
 <!-- ═══════ FOOTER ═══════ -->
 <div class="footer-bar">
   <span class="footer-quote">AI管理交互图谱：<span>让决策更智能 · 让中台更赋能 · 让一线更强大</span></span>
-  <span class="footer-ver">v8.0 · 2026.05</span>
+  <span class="footer-ver">v8.1 · 2026.05</span>
 </div>
 
 </div>
@@ -834,9 +816,7 @@
       <div class="phone-header-title" id="modalTitle">Bot名称</div>
       <div class="phone-header-sub" id="modalSub">角色描述</div>
     </div>
-    <div class="phone-screen" id="modalContent">
-      <!-- 动态填充 -->
-    </div>
+    <div class="phone-screen" id="modalContent"></div>
   </div>
 </div>
 
@@ -1131,7 +1111,6 @@ function openBotModal(botId) {
 
   let html = '';
 
-  // Bot介绍卡片
   html += `<div class="bot-profile ${bot.theme}">
     <div class="bot-profile-header">
       <div class="bot-profile-avatar">${bot.avatar}</div>
@@ -1146,13 +1125,12 @@ function openBotModal(botId) {
     </div>
   </div>`;
 
-  // 案例
   if (bot.cases && bot.cases.length > 0) {
     bot.cases.forEach(c => {
       html += `<div class="msg-divider"><span>${c.title}</span></div>`;
       if (c.date) html += `<div class="msg-date">${c.date}</div>`;
 
-      c.messages.forEach((msg, idx) => {
+      c.messages.forEach((msg) => {
         if (msg.type === 'user') {
           html += `<div class="msg-row user">
             <div class="msg-avatar user">${c.user.avatar}</div>
@@ -1234,13 +1212,13 @@ function drawLines() {
     const gmX = gmRect.left + gmRect.width / 2 - mapRect.left;
     const gmY = gmRect.bottom - mapRect.top;
 
-    platforms.forEach((plat, i) => {
+    platforms.forEach((plat) => {
       const platRect = plat.getBoundingClientRect();
       const platX = platRect.left + platRect.width / 2 - mapRect.left;
       const platY = platRect.top - mapRect.top;
 
       const midY = gmY + (platY - gmY) / 2;
-      paths += `<path d="M ${gmX} ${gmY} L ${gmX} ${midY} L ${platX} ${midY} L ${platX} ${platY - 4}" fill="none" stroke="#3B84FF" stroke-width="1.5" stroke-dasharray="none" marker-end="url(#arr-blue)" opacity="0.5"/>`;
+      paths += `<path d="M ${gmX} ${gmY} L ${gmX} ${midY} L ${platX} ${midY} L ${platX} ${platY - 4}" fill="none" stroke="#3B84FF" stroke-width="1.5" marker-end="url(#arr-blue)" opacity="0.5"/>`;
     });
   }
 
@@ -1263,7 +1241,7 @@ function drawLines() {
     });
   }
 
-  // 技能回流：营业部(右侧) -> 中台(右侧)
+  // 技能回流
   if (branches.length === 2 && platforms.length === 3) {
     const rightBranch = branches[1];
     const rightPlat = platforms[2];
@@ -1284,7 +1262,6 @@ function drawLines() {
   svg.innerHTML = svg.querySelector('defs').outerHTML + paths;
 }
 
-// 初始化绘制 + 窗口变化重绘
 window.addEventListener('load', drawLines);
 window.addEventListener('resize', drawLines);
 setTimeout(drawLines, 500);
