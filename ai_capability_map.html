@@ -1130,34 +1130,36 @@ const botData = {
     role: '商机挖掘智能体',
     theme: 'blue',
     avatar: '🔍',
-    intro: '我是上市公司商机洞察龙虾，专注于信息披露追踪、IPO/再融资/减持预警、商机自动分级与推送。我帮助分公司及时捕捉上市公司业务机会，为财富和机构业务提供线索。',
-    value: '<b>替代工作：</b>人工浏览公告、手工整理舆情、逐个查询持股信息<br><b>辅助工作：</b>商机自动分级、跨营业部协同推送、客户持仓匹配',
+    intro: '我是上市公司商机推送智能体，每日匹配辖区上市公司商机及舆情，7×24在线服务。我通过飞书私聊为营业部总经理/副总提供专属数据服务——你主动来问，我直接答；不打扰、不群发。',
+    value: '<b>🎯 角色定位</b><br>服务对象：深圳分公司 14 家营业部、海南三亚海口 2 家营业部的总经理 / 副总<br>数据范围：你登录后我自动识别身份，只给你看你所属营业部的数据<br>工作模式：你主动来问 → 我直接答；不打扰、不群发<br><br><b>🛠️ 核心能力</b><br><br>1️⃣ <b>商机推送（每日上午）</b><br>自动按各营业部覆盖名单匹配当天商机：股份回购、员工持股、股权激励、股东增减持，配套每家公司的舆情扫描（前30天，三个来源：微信公众号、东方财富个股新闻、东方财富研报），自动情感分类和事件类型，输出 Excel 私聊发给你<br><br>2️⃣ <b>上市公司舆情查询（按需）</b><br>你可以问我任意已覆盖的上市公司的最近舆情，我会跑三个来源拉给你，生成 Excel<br><br>3️⃣ <b>营业部信息查询</b><br>你营业部覆盖了哪些上市公司、最近哪几家有动作，问我就行<br><br><b>📦 典型产出</b><br>Excel 报告：「商机+舆情_营业部名称_YYYYMMDD.xlsx」，含说明 Sheet + 数据 Sheet<br>私聊预览：每次出报告前先发预览给主理人确认，正式发到你这边的都是确认版<br><br><b>⚠️ 数据边界</b><br>你看到的所有数据，只限于你所属营业部覆盖的公司。跨营业部 / 全分公司数据需通知管理员授权',
     cases: [
       {
-        title: '定时推送舆情报告',
-        date: '5月20日 10:04',
-        user: null,
-        botName: '上市公司商机推送机器人',
-        botAvatar: '🔍',
-        botTag: '机器人',
-        theme: 'blue',
-        messages: [
-          { type: 'bot', text: '<b>📊 营业部分组舆情与公告报告</b><br>📅 报告日期：2026年5月20日 | 数据日期：2026年5月19日<br><br><b>——— 今日概览 ———</b><br>• 共监测 <b>5个营业部</b>，覆盖上市公司舆情与公告<br>• 发现 ⚠️ <b>1条重要公告：</b>强瑞技术(301128)控股股东拟减持不超1.93%<br>• 潜在业务机会：<b>1家未覆盖公司</b> - 茂硕电源(002660)股东拟减持<br><br><b>——— 各营业部情况 ———</b><br><br>🏢 <b>深圳平安金融中心</b>（4条舆情）<br>• 深圳瑞捷(300977)：财务总监辞职 | 中性<br>• 方直科技(300235)：主力净流出265万 | 中性<br>• 信宇人(688573)：获得实用新型专利 | <span class="green">✅ 利好</span><br>• 蓝海华腾(300484)：主力净流出1806万，股价跌2.28% | <span class="red">⚠️ 利空</span><br><br>🏢 <b>深圳益田路</b>（4条舆情 + 1条公告）<br>• ⭐ 强瑞技术(301128)：控股股东拟减持1.93% | <span class="red">⚠️ 利空</span>（潜在股份管理业务机会）<br>• 大为股份(002213)：主力净流出3471万，子公司通过高企认定 | 中性<br>• 必易微(688045)：披露限制性股票激励计划 | 中性<br>• 深圳瑞捷(300977)：财务总监辞职 | 中性<br><br>🏢 <b>深圳前海</b>（1条舆情）<br>• 大为股份(002213)：主力净流出3471万 | 中性<br><br>🏢 <b>深圳基金大厦 / 深圳华润大厦</b>（共2条舆情）<br>• 杰恩设计(300668)：股东会99.96%高票通过关联交易 | <span class="green">✅ 利好</span><br>• 联建光电(300269)：年度股东会多项议案同意率超98% | <span class="green">✅ 利好</span><br><br><b>——— 潜在商机 ———</b><br>📍 <b>茂硕电源(002660)</b> - 注册地深圳，股东拟减持，可关注是否需要券商服务<br><br>详细数据见附件 Excel 表格 👇' },
-          { type: 'file', icon: 'X', iconBg: '#34C759', name: '营业部分组舆情与公告报告_20260520.xlsx', size: '10.52 KB' }
-        ]
-      },
-      {
-        title: '主动查询舆情',
-        date: '昨天 09:26',
-        user: { name: '华宇南', avatar: '华' },
-        botName: '华宇南ArkClaw版',
+        title: '基金大厦营业部画像与商机概览',
+        date: '昨天 19:59',
+        user: { name: '景融嘉', avatar: '景' },
+        botName: '上市公司商机推送',
         botAvatar: '🔍',
         botTag: '智能体',
         theme: 'blue',
         messages: [
-          { type: 'user', text: '<span class="blue">@华宇南ArkClaw版</span> 要' },
-          { type: 'bot', quote: '华宇南: @华宇南ArkClaw版 要', text: '<b>📊 新国都(300130) 近7天微信公众号舆情</b><br><br>近7天微信公众号共命中 <b>1条</b> 相关报道，情感倾向：<b>中性</b>。<br><br><b>📌 重点关注：</b><br>《新国都(嘉联支付)2026Q1点评：业务增收不增利，跨境支付能否成为增长支柱？》<br>— paytech生产力，约5月21日<br><br><b>观点摘要：</b><br>2025年净利润翻倍主要靠非经常性损益，核心业务承压；嘉联支付多次因违规收到罚单；"增收不增利"隐忧凸显，跨境支付被视为下一阶段潜在增长支柱。<br><br>详见附件 Excel 👇' },
-          { type: 'file', icon: 'X', iconBg: '#34C759', name: '新国都微信公众号舆情_近7天.xlsx', size: '5.68 KB' }
+          { type: 'user', text: '太棒了！你给我看看基金大厦的情况吧' },
+          { type: 'bot', quote: '景融嘉: 太棒了！你给我看看基金大厦的情况吧', text: '身份核验通过——你是基金大厦营业部的副总（挂职），我可以给你看自家数据。让我汇总基金大厦的情况：<br><br>景融嘉总，给你看「深圳深南大道基金大厦证券营业部」的全景：<br><br>📊 <b>营业部画像</b><br>• 覆盖上市公司：<b>25 家</b>（深圳本地 18 / 异地 7）<br>• 平均市值：<b>164 亿</b> · 中位市值：<b>53 亿</b><br>• 市值梯队：1家千亿（顺丰）+ 2家四五百亿（万科A、新产业）+ 大量中小市值<br>• ST 标的：2家（ST惠程、ST同洲）⚠️ 注意风险<br><br>🏆 <b>市值 Top 5（重点维护对象）</b><br><table class="msg-table"><tr><th>简称</th><th>代码</th><th>市值（亿）</th><th>所在地</th></tr><tr><td>顺丰控股</td><td>002352</td><td><b>1884</b></td><td>深圳</td></tr><tr><td>万科A</td><td>000002</td><td>450</td><td>深圳</td></tr><tr><td>新产业</td><td>300832</td><td>373</td><td>深圳</td></tr><tr><td>粤电力A</td><td>000539</td><td>331</td><td>广州</td></tr><tr><td>英诺激光</td><td>301021</td><td>97</td><td>深圳</td></tr></table><br>📋 <b>全部 25 家覆盖名单</b><br><b>深圳本地（18家）</b><br>• 大盘股：顺丰控股 / 万科A / 新产业<br>• 中小盘：英诺激光、长园集团、博士眼镜、宝鹰股份、远望谷、王子新材、瑞凌股份、深中华A、光峰科技、杰恩设计、蕾奥规划、联建光电、中兰环保、中青宝、ST同洲<br><br><b>异地（7家）</b><br>• 百果园集团（港股 2411.HK）· ST惠程（重庆璧山）· 日发精机（绍兴）· 翔丰华（上海宝山）· 科捷智能（青岛）· 粤电力A（广州）· 华神科技（成都）<br><br>📅 <b>今日（2026-05-27）商机情况</b><br>❌ <b>基金大厦今天 0 条命中</b>——商机表里全市 39 条商机，4个营业部命中（前海、平安金融中心、益田路、荣超），但你们这 25 家公司今天都没出回购/激励/增减持公告。<br><br>📧 <b>未覆盖深圳/海南</b> 那张总表里有 2 家深圳上市公司今天有商机（001287 中电港、000026 飞亚达），陈顺总和你应该已经收到那份「未覆盖深圳海南」Excel 了。<br><br>要不要我做：<br>1. 🔍 <b>跑一下基金大厦覆盖的 25 家公司近 30 天舆情扫描</b>（看看哪几家最近有动作 / 需要关注）<br>2. 📊 <b>挑你最关心的某家公司单查近期所有信息</b>（比如顺丰、万科、新产业、ST惠程的风险扫描）<br>3. 📈 <b>市值变化追踪</b>（25 家的市值近期变化）<br>或者你直接告诉我想了解什么角度。' }
+        ]
+      },
+      {
+        title: '30天舆情扫描与风险报告',
+        date: '昨天 20:02',
+        user: { name: '景融嘉', avatar: '景' },
+        botName: '上市公司商机推送',
+        botAvatar: '🔍',
+        botTag: '智能体',
+        theme: 'blue',
+        messages: [
+          { type: 'user', text: '好哦你给我扫描一下' },
+          { type: 'bot', quote: '景融嘉: 好哦你给我扫描一下', text: '收到老板！跑前先跟你确认下范围（25 家全跑公众号太重，2 小时+）：<br><br>⏱️ <b>三个来源预估时间</b><br><table class="msg-table"><tr><th>来源</th><th>25 家全跑</th><th>速度</th></tr><tr><td>东方财富个股新闻（API）</td><td>~2 分钟</td><td>快</td></tr><tr><td>东方财富研报（API）</td><td>~1 分钟</td><td>快</td></tr><tr><td>微信公众号（爬虫）</td><td>~2 小时+</td><td>慢</td></tr></table><br>建议先跑 <b>东方财富新闻 + 研报</b>（3 分钟出结果），公众号可以后续补跑。<br><br>我先按这个节奏跑了，你稍等。' },
+          { type: 'bot', text: '最值得跟进的 4 家：<br>1. <b>顺丰</b>——回购利好 + 控股股东质押超 30% 需关注<br>2. <b>ST 惠程</b>——刚撤销退市风险但仍有其他风险，债务问题被问询<br>3. <b>中青宝</b>——连亏 5 年，质押风险<br>4. <b>日发精机</b>——保留意见审计报告，子公司失控<br><br>要不要我做：<br>• 🔍 <b>某家公司深挖</b>（比如顺丰的回购+质押交叉看看）<br>• 📞 <b>联系建议</b>（哪几家可以借舆情切入接触上市公司）<br>• 🌐 <b>补跑公众号舆情</b>（重点关注的几家深翻搜狗微信）<br>或者你直接告诉我下一步。' },
+          { type: 'bot', text: '<b>📊 基金大厦覆盖公司 30 天舆情扫描完成</b><br><br>⏱️ <b>时间窗口：</b>2026-04-27 → 2026-05-27<br>📡 <b>数据来源：</b>东方财富个股新闻 + 东方财富研报（24 家 A 股全跑，百果园 2411.HK 港股未在此次范围）<br>📈 <b>总命中：</b>新闻 233 条 + 研报 6 条 = <b>239 条</b><br><br>🚨 <b>重点风险关注（共 13 家公司有负面舆情）</b><br><br>⚠️ <b>高风险 - 业绩+ST 类</b><br>• <b>002168 ST 惠程：</b>6 条全负面，刚撤销退市风险警示但仍被实施其他风险警示（5-7），有债务豁免 1.3 亿被问询（5-8）<br>• <b>300052 中青宝：</b>7 条负面，<b>已连续 5 年亏损</b>，2025 亏 5000 万+，控股股东质押风险被市场关注<br>• <b>002520 日发精机：</b>5 条负面，2025 亏 2.09 亿，<b>年报被出具保留意见</b>（两家境外子公司失控）<br>• <b>300269 联建光电：</b>2 条负面，扣非净利<b>连亏 9 年</b>，营收创 14 年新低<br>• <b>300854 中兰环保：</b>4 条负面，2025 由盈转亏，机构持股下降<br>• <b>000790 华神科技：</b>业绩亏损 + 经营性现金流吃紧，正在筹划定增"补血"<br>• <b>002047 宝鹰股份：</b>刚撤销 *ST，5-21 起恢复"宝鹰股份"简称（实际是利好）<br>• <b>000539 粤电力 A：</b>一季度亏 1.52 亿（亏损同比缩小）<br><br>📉 <b>股东减持 / 质押类</b><br>• <b>002352 顺丰控股：</b>控股股东解除质押 2200 万股，<b>累计质押超三成</b>持股（5-12）⚠️ 注意跟进<br>• <b>300890 翔丰华：</b>股东钟英浩拟减持不超 2% 股份（5-21）<br>• <b>300832 新产业：</b>今天 5-27 控股股东质押 701 万股、解押 622 万股 + 大宗交易折价 7.16%<br>• <b>002735 王子新材：</b>独立董事曹跃云辞职<br><br>⚡ <b>异动类</b><br>• <b>301021 英诺激光：</b>5-21 成交额创上市以来新高 + 多次大宗交易折价 27-30%（投机情绪强）<br><br>⭐ <b>顺丰控股专项（你们最大票，市值 1884 亿）</b><br><b>正面：</b><br>• 5-21 斥资 <span class="green">2.03 亿元回购 569.38 万股 A 股</span> 🟢<br>• 5-20 4 月营收 253.76 亿，单票收入连续两个月同比回升 🟢<br>• 5-19 4 月供应链及国际业务营收增长超 18% 🟢<br><b>风险：</b><br>• 5-12 控股股东解除质押 2200 万股，<b>累计质押超三成</b> ⚠️<br><b>整体：</b>业绩+回购利好，但要留意大股东质押集中度。<br><br>💡 <b>其他亮点</b><br>• <b>300832 新产业：</b>覆盖 5 份研报，是覆盖名单里最受券商关注的中盘股<br>• <b>万科A / ST同洲 / 长园集团：</b>近 30 天 0 条精筛舆情（标题不含简称就被过滤了，不代表完全无消息）<br><br>📎 <b>完整 Excel</b> ⬇️<br>包含 3 类 Sheet：<br>1. 说明（数据口径透明）<br>2. 25 家汇总（命中数排行 + 最新一条标题）<br>3. 每家命中公司一个 Sheet（按日期倒序、负面行标红、正面行标绿）' },
+          { type: 'file', icon: 'X', iconBg: '#34C759', name: '基金大厦舆情扫描_30天_20260527.xlsx', size: '66.6 KB' }
         ]
       }
     ]
@@ -1230,7 +1232,7 @@ const botData = {
         theme: 'purple',
         messages: [
           { type: 'user', text: '<span class="blue">@经营考核bot</span> 发下考核看板' },
-          { type: 'bot', quote: '孙黎慧: @经营考核bot 发下考核看板', text: '<b>📊 营业部经营考核看板</b><br><br>🔗 https://dcb6d8f07ce048b583c5ffd3228c0b2d.app.codebuddy.work/考核看板_20260522.html<br><br>🔑 密码：<b>kh2026</b>' }
+          { type: 'bot', quote: '孙黎慧: @经营考核bot 发下考核看板', text: '好的，已为您生成营业部经营考核看板，点击下方卡片查看 👇' }
         ],
         dashboard: {
           label: '推送的看板链接：',
@@ -1321,7 +1323,7 @@ const botData = {
         theme: 'purple',
         messages: [
           { type: 'user', text: '<span class="blue">@营销活动_小鱼刺#1</span> 发下深圳分公司活动周报看板链接' },
-          { type: 'bot', quote: '于水: @营销活动_小鱼刺#1 发下深圳分公司活动周报看板链接', text: '<b>🔗 深圳分公司活动周报看板</b><br><br>https://44daaf05b73e4588b6149998de416ab4.app.codebuddy.work/index.html<br><br>🔑 密码：<b>sz2026</b>' }
+          { type: 'bot', quote: '于水: @营销活动_小鱼刺#1 发下深圳分公司活动周报看板链接', text: '好的，已为您生成深圳分公司活动周报看板，点击下方卡片查看 👇' }
         ],
         dashboard: {
           label: '推送的看板链接：',
@@ -1352,7 +1354,7 @@ const botData = {
     theme: 'purple',
     avatar: '💰',
     intro: '我是你的专属AI助手，通过飞书接入，服务于华泰证券财务管理场景。你的财务数据助手，负责帮你快速查询、整理和呈现营业部经营数据，提升日常财务管理效率。',
-    value: '<b>核心能力：</b><br>• <b>经营数据查询</b> — 各营业部的收入、利润、预算完成率等核心指标即问即答，支持同比、环比分析，快速定位变化趋势<br>• <b>费用管理</b> — 营业部费用支出明细查询与对比，差旅费管理办法解读及实操咨询<br>• <b>权限分级</b> — 支持按人员-营业部对应关系进行数据权限控制，每位营业部老总只能查看自己管辖的数据，财务总监可查全量',
+    value: '<b>角色定位</b><br>你的财务数据助手，负责帮你快速查询、整理和呈现营业部经营数据，提升日常财务管理效率。<br><br><b>核心能力</b><br><br>📊 <b>经营数据查询</b><br>• 各营业部的收入、利润、预算完成率等核心指标即问即答<br>• 支持同比、环比分析，快速定位变化趋势<br><br>💰 <b>费用管理</b><br>• 营业部费用支出明细查询与对比<br>• 差旅费管理办法解读及实操咨询<br><br>🔐 <b>权限分级</b><br>• 支持按人员-营业部对应关系进行数据权限控制<br>• 每位营业部老总只能查看自己管辖的数据，财务总监可查全量',
     cases: [
       {
         title: '财务数据即问即答',
@@ -1378,19 +1380,6 @@ const botData = {
         messages: [
           { type: 'user', text: '<span class="blue">@财务龙虾</span> 龙岗目前利润情况' },
           { type: 'bot', quote: '李辉: @财务龙虾 龙岗目前利润情况', text: '根据"营业部收入利润同比202604"文件，龙岗的考核利润情况：<br><br>• <b>1-4月考核利润同比增幅：</b><span class="green">+102.99%</span><br>• <b>4月考核利润累计月均变动：</b><span class="red">-0.21%</span>' }
-        ]
-      },
-      {
-        title: '自我介绍与能力展示',
-        date: '5月20日 10:15',
-        user: { name: '景融嘉', avatar: '景' },
-        botName: '财务数据龙虾',
-        botAvatar: '💰',
-        botTag: '智能体',
-        theme: 'purple',
-        messages: [
-          { type: 'user', text: '给我自我介绍一下吧！你的角色定位，你能做些什么，有什么核心的技能和产出？' },
-          { type: 'bot', text: '你好，我是你的专属AI助手，通过飞书接入，服务于华泰证券财务管理场景。<br><br><b>角色定位</b><br>你的财务数据助手，负责帮你快速查询、整理和呈现营业部经营数据，提升日常财务管理效率。<br><br><b>核心能力</b><br><br>📊 <b>经营数据查询</b><br>• 各营业部的收入、利润、预算完成率等核心指标即问即答<br>• 支持同比、环比分析，快速定位变化趋势<br><br>💰 <b>费用管理</b><br>• 营业部费用支出明细查询与对比<br>• 差旅费管理办法解读及实操咨询<br><br>🔐 <b>权限分级</b><br>• 支持按人员-营业部对应关系进行数据权限控制<br>• 每位营业部老总只能查看自己管辖的数据，财务总监可查全量' }
         ]
       }
     ]
@@ -1550,29 +1539,6 @@ function openBotModal(botId) {
       html += `<div class="msg-divider"><span>${c.title}</span></div>`;
       if (c.date) html += `<div class="msg-date">${c.date}</div>`;
 
-      if (c.dashboard) {
-        html += `<div class="msg-row">
-          <div class="msg-avatar ${c.theme}">${c.botAvatar}</div>
-          <div class="msg-content">
-            <div class="msg-meta">
-              <span class="msg-name">${c.botName}</span>
-              <span class="msg-tag">看板</span>
-            </div>
-            <div class="msg-bubble" style="padding:12px 14px;">
-              <div style="font-size:12px;color:var(--text-d);margin-bottom:8px;">${c.dashboard.label}</div>
-              <a href="${c.dashboard.url}" target="_blank" class="dashboard-link" style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--grey-96);border-radius:8px;text-decoration:none;color:var(--text-a);font-size:13px;border:1px solid rgba(0,0,0,0.04);transition:background .2s;">
-                <span style="font-size:18px;">📊</span>
-                <div style="flex:1;min-width:0;">
-                  <div style="font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${c.dashboard.title}</div>
-                  <div style="font-size:11px;color:var(--text-d);margin-top:2px;">点击打开看板${c.dashboard.password ? ' · 密码：' + c.dashboard.password : ''}</div>
-                </div>
-                <span style="font-size:12px;color:var(--blue);">↗</span>
-              </a>
-            </div>
-          </div>
-        </div>`;
-      }
-
       c.messages.forEach((msg) => {
         if (msg.type === 'user') {
           html += `<div class="msg-row user">
@@ -1607,6 +1573,30 @@ function openBotModal(botId) {
           </div>`;
         }
       });
+
+      if (c.dashboard) {
+        html += `<div class="msg-row">
+          <div class="msg-avatar ${c.theme}">${c.botAvatar}</div>
+          <div class="msg-content">
+            <div class="msg-meta">
+              <span class="msg-name">${c.botName}</span>
+              <span class="msg-tag">看板</span>
+              <span class="msg-time">${c.date ? c.date.split(' ').pop() : ''}</span>
+            </div>
+            <div class="msg-bubble" style="padding:12px 14px;">
+              <div style="font-size:12px;color:var(--text-d);margin-bottom:8px;">${c.dashboard.label}</div>
+              <div onclick="window.open('${c.dashboard.url}', '_blank')" class="dashboard-link" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--grey-96);border-radius:8px;text-decoration:none;color:var(--text-a);font-size:13px;border:1px solid rgba(0,0,0,0.04);transition:background .2s;">
+                <span style="font-size:18px;">📊</span>
+                <div style="flex:1;min-width:0;">
+                  <div style="font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${c.dashboard.title}</div>
+                  <div style="font-size:11px;color:var(--text-d);margin-top:2px;">点击打开看板${c.dashboard.password ? ' · 密码：' + c.dashboard.password : ''}</div>
+                </div>
+                <span style="font-size:12px;color:var(--blue);">↗</span>
+              </div>
+            </div>
+          </div>
+        </div>`;
+      }
     });
   } else {
     html += `<div style="text-align:center;padding:40px 20px;color:var(--text-d);font-size:13px;">
