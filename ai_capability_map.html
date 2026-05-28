@@ -1122,7 +1122,37 @@ const botData = {
     avatar: '🦐',
     intro: '我是金融产品龙虾，覆盖公募、私募、资管等全品类金融产品知识。我为分公司员工提供产品信息查询、对比分析、卖点提炼等服务，帮助一线销售更专业地服务客户。',
     value: '<b>替代工作：</b>手工翻阅产品资料、跨系统查询产品信息、整理产品对比表<br><b>辅助工作：</b>产品卖点智能提炼、客户适配推荐、竞品对比分析',
-    cases: []
+    cases: [
+      {
+        title: '代销私募产品业绩周报',
+        date: '今天 09:00',
+        user: { name: '分公司员工', avatar: '员' },
+        botName: '金融产品龙虾',
+        botAvatar: '🦐',
+        botTag: '智能体',
+        theme: 'blue',
+        messages: [
+          { type: 'user', text: '查看本周代销私募产品业绩周报' },
+          { type: 'bot', text: '<b>📊 代销私募产品业绩周报</b>（2026.5.22更新）<br><br>📌 <b>产品总数：</b>258只<br>📌 <b>策略分类：</b>10个<br><br><b>分策略表现概览</b><br><table class="msg-table"><tr><th>策略类型</th><th>数量</th></tr><tr><td>主观股票多头</td><td>41只</td></tr><tr><td>量化择时</td><td>7只</td></tr><tr><td>市场中性</td><td>11只</td></tr><tr><td>宏观</td><td>5只</td></tr><tr><td>组合基金</td><td>29只</td></tr><tr><td>债券</td><td>14只</td></tr><tr><td>套利</td><td>6只</td></tr><tr><td>CTA</td><td>4只</td></tr></table>' },
+          { type: 'bot', text: '<b>🏆 全部产品 TOP10（YTD）</b><br><table class="msg-table"><tr><th>排名</th><th>产品名称</th><th>YTD</th></tr><tr><td>1</td><td>睿扬尊享18号</td><td><span class="red">+56.06%</span></td></tr><tr><td>2</td><td>希瓦小牛10号</td><td><span class="red">+48.42%</span></td></tr><tr><td>3</td><td>九坤股票多空配置1号</td><td><span class="red">+14.92%</span></td></tr><tr><td>4</td><td>九坤量化CTA精选1号</td><td><span class="red">+13.68%</span></td></tr><tr><td>5</td><td>九坤量化择时增强1号</td><td><span class="red">+12.11%</span></td></tr></table>' },
+          { type: 'bot', text: '<b>📉 全部产品 BOTTOM10（YTD）</b><br><table class="msg-table"><tr><th>排名</th><th>产品名称</th><th>YTD</th></tr><tr><td>1</td><td>陆宝嘉成优势成长</td><td><span class="green">-11.92%</span></td></tr><tr><td>2</td><td>博普锐泰1号</td><td><span class="green">-10.89%</span></td></tr><tr><td>3</td><td>稳博中证1000指增3号</td><td><span class="green">-9.45%</span></td></tr><tr><td>4</td><td>量派中证1000增强18号</td><td><span class="green">-8.32%</span></td></tr><tr><td>5</td><td>鸣石春天商城1号</td><td><span class="green">-7.18%</span></td></tr></table>' }
+        ]
+      },
+      {
+        title: '九坤量化代销产品全览',
+        date: '今天 09:15',
+        user: { name: '分公司员工', avatar: '员' },
+        botName: '金融产品龙虾',
+        botAvatar: '🦐',
+        botTag: '智能体',
+        theme: 'blue',
+        messages: [
+          { type: 'user', text: '查看九坤量化代销产品表现' },
+          { type: 'bot', text: '<b>🎯 重点关注：九坤量化代销产品全览</b><br><br>📌 <b>代销产品总数：</b>12只<br><br><b>量化择时系列表现亮眼</b><br>• 4只产品YTD全部超11%<br>• 平均收益 <span class="red">+12.11%</span><br><br><b>九坤进享系列产品详细数据</b><br><table class="msg-table"><tr><th>产品名称</th><th>策略</th><th>YTD</th></tr><tr><td>九坤量化择时增强1号</td><td>量化择时</td><td><span class="red">+12.11%</span></td></tr><tr><td>九坤股票多空配置1号</td><td>股票多空</td><td><span class="red">+14.92%</span></td></tr><tr><td>九坤量化CTA精选1号</td><td>CTA</td><td><span class="red">+13.68%</span></td></tr></table>' },
+          { type: 'bot', text: '<b>📊 九坤代销产品整体总结</b><br><br>• <b>量化择时平均YTD：</b><span class="red">+12.11%</span><br>• <b>量化多头平均YTD：</b><span class="red">+1.95%</span><br><br>💡 <b>产品亮点：</b><br>九坤量化择时系列产品在波动市场中表现稳健，CTA策略与股票多空策略形成有效互补，适合作为客户资产配置的量化工具。' }
+        ]
+      }
+    ]
   },
 
   'insight-lobster': {
